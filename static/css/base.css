@@ -76,6 +76,7 @@ body {
         z-index: 1030;
     }
 
+    /* Push body down to main page header bottom */
     .header-container {
         padding-top: 164px;
     }
