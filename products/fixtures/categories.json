@@ -1,0 +1,82 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "camping",
+        "friendly_name": "Camping"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "Caravanning",
+        "friendly_name": "Caravans & Campervans"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "glamping",
+        "friendly_name": "Glamping"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "extras",
+        "friendly_name": "Extras"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "land",
+        "friendly_name": "Land-based"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "water",
+        "friendly_name": "Water-based"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "wheels",
+        "friendly_name": "Wheels-based"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "leader",
+        "friendly_name": "Leader qualifications"
+      }
+    },
+    {
+        "pk": 9,
+        "model": "products.category",
+        "fields": {
+          "name": "skills",
+          "friendly_name": "Skills qualifications"
+        }
+      },
+    {
+      "pk": 10,
+      "model": "products.category",
+      "fields": {
+        "name": "first_aid",
+        "friendly_name": "First aid qualifications"
+      }
+    }
+  ]
