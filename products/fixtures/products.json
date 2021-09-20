@@ -1,0 +1,30 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12001",
+        "name": "Tent pitch",
+        "description": "Grass pitch. No electric hook up. Size 8m x 6m.",
+        "price": 10.00,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://images.pexels.com/photos/6324131/pexels-photo-6324131.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+        "image": "camping.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12002",
+        "name": "Caravan or Campervan pitch",
+        "description": "Grass or hard-standing pitches available. Size 12m x 10m. Electric hookup included.",
+        "price": 15.00,
+        "category": 2,
+        "rating": 4.8,
+        "image_url": "https://images.unsplash.com/photo-1626680114529-3f6ffa002b80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80",
+        "image": "caravan.jpg"
+      }
+    }
+]
