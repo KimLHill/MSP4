@@ -8,10 +8,10 @@
             </a>
             <!-- Options to sort campsite products by -->
             <div class="dropdown-menu border-0" aria-labelledby="campsite-link">
-                <a href="" class="dropdown-item">Camping</a>
-                <a href="" class="dropdown-item ">Caravanning</a>
-                <a href="" class="dropdown-item ">Glamping</a>
-                <a href="" class="dropdown-item">Extras</a>
+                <a href="{% url 'products' %}?category=camping" class="dropdown-item">Camping</a>
+                <a href="{% url 'products' %}?category=caravanning" class="dropdown-item ">Caravanning</a>
+                <a href="{% url 'products' %}?category=glamping" class="dropdown-item ">Glamping</a>
+                <a href="{% url 'products' %}?category=extras" class="dropdown-item">Extras</a>
             </div>
         </li>
         <!-- Activities dropdown menu -->
@@ -21,9 +21,9 @@
             </a>
             <!-- Options to sort activities products by -->
             <div class="dropdown-menu border-0" aria-labelledby="activities-link">
-                <a href="" class="dropdown-item">Land-based</a>
-                <a href="" class="dropdown-item">Water-based</a>
-                <a href="" class="dropdown-item">Wheels-based</a>
+                <a href="{% url 'products' %}?category=land" class="dropdown-item">Land-based</a>
+                <a href="{% url 'products' %}?category=water" class="dropdown-item">Water-based</a>
+                <a href="{% url 'products' %}?category=wheels" class="dropdown-item">Wheels-based</a>
             </div>
         </li>
         <!-- Courses dropdown menu -->
@@ -33,9 +33,9 @@
             </a>
             <!-- Options to sort courses products by -->
             <div class="dropdown-menu border-0" aria-labelledby="courses-link">
-                <a href="" class="dropdown-item">Leader qualifications</a>
-                <a href="" class="dropdown-item">skills qualifications</a>
-                <a href="" class="dropdown-item">First aid</a>
+                <a href="{% url 'products' %}?category=leader" class="dropdown-item">Leader qualifications</a>
+                <a href="{% url 'products' %}?category=skills" class="dropdown-item">skills qualifications</a>
+                <a href="{% url 'products' %}?category=first_aid" class="dropdown-item">First aid</a>
             </div>
         </li>
     </ul>
