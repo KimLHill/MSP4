@@ -26,5 +26,47 @@
         "image_url": "https://images.unsplash.com/photo-1626680114529-3f6ffa002b80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80",
         "image": "caravan.jpg"
       }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12003",
+        "name": "Glamping tent",
+        "description": "A stunning glamping dome that is fully equipped for everything you need to enjoy a night of luxury under canvas. Includes a super comfy double-bed, sofa, kitchen area, lighting and electricity.",
+        "price": 40.00,
+        "category": 3,
+        "rating": 5,
+        "image_url": "https://images.pexels.com/photos/5359324/pexels-photo-5359324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "image": "glamping.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12004",
+        "name": "BBQ",
+        "description": "A portable, charcoal bbq perfect for grilling your own food during your stay. Large cooking surface suitable for up to 6 people. Comes with 3 utensils (tongs, fork and spatula).",
+        "price": 8.00,
+        "category": 4,
+        "rating": 3.9,
+        "image_url": "https://images.pexels.com/photos/8522790/pexels-photo-8522790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "image": "bbq.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12005",
+        "name": "Dog",
+        "description": "One friendly, well-behaved dog. Please keep your dog on a lead and clean up behing your dog.",
+        "price": 2.00,
+        "category": 4,
+        "rating": 3.9,
+        "image_url": "https://images.pexels.com/photos/3680896/pexels-photo-3680896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "image": "dog.jpg"
+      }
     }
 ]
