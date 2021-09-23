@@ -72,6 +72,18 @@ body {
 	z-index: -1;
 }
 
+/* Category badge styling */
+a.category-badge > span.badge{
+    background: #93c47d !important;
+    color: #000 !important;
+}
+
+/* Category badge styling when hovered over */
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
