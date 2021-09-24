@@ -43,6 +43,13 @@ body {
     color: white;
 }
 
+/* quantity box outline on product pages */
+.btn-outline-black {
+    background: white;
+    color: black !important; 
+    border: 1px solid black;
+}
+
 .book-now-button:hover,
 .book-now-button:active,
 .book-now-button:focus,
