@@ -68,5 +68,61 @@
         "image_url": "https://images.pexels.com/photos/3680896/pexels-photo-3680896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "image": "dog.jpg"
       }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12006",
+        "name": "Segway",
+        "description": "Jump on board one of our all-terrain Segways for a fast and fun way to explore the forest trails.",
+        "price": 60.00,
+        "category": 7,
+        "rating": 4.2,
+        "image_url": "https://images.unsplash.com/photo-1492558647888-45b0d471e2c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1120&q=80",
+        "image": "segway.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12007",
+        "name": "Mountain biking",
+        "description": "What better way to explore the forest than at your own pace on two-wheels? With 5 superb bike trails ranging from our 10km Rookie trail to the 40km Black trail, this activity is great fun whether a novice or experienced rider. Hire a bike and give it a go today.",
+        "price": 30.00,
+        "category": 7,
+        "rating": 4.0,
+        "image_url": "https://images.unsplash.com/photo-1594942940158-af338884ac6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+        "image": "mtb.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12008",
+        "name": "Guided walking",
+        "description": "Enjoy a 10 mile guided walking along the River and Railway path. Discover the mining history, learn about the flora and fauna and enjoy a mix of trail, woodland and gravel tracks. Suitable for all abilities.",
+        "price": 15.00,
+        "category": 5,
+        "rating": 3.7,
+        "image_url": "https://images.unsplash.com/photo-1597120590849-a1d5a743d155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "image": "walking.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12009",
+        "name": "Guided hiking",
+        "description": "Explore some of the finest mountains in South Wales with this tough but rewarding 25 mile guided hike along the Gyfylchi Ridgetop Trial. With steep ascents and descents and some technical sections, this hike is for people with a good level of fitness and with previous hiking experience. A tough day out but the views from the ridge above the forest are the ultimate reward.",
+        "price": 35.00,
+        "category": 5,
+        "rating": 4.8,
+        "image_url": "https://images.unsplash.com/photo-1606262482703-496941e54337?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+        "image": "hiking.jpg"
+      }
     }
 ]

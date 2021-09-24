@@ -32,3 +32,7 @@ The images used on my wireframes and website are from:
 * [caravan image](https://images.unsplash.com/photo-1626680114529-3f6ffa002b80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80)
 * [bbq image](https://images.pexels.com/photos/8522790/pexels-photo-8522790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [dog image](https://images.pexels.com/photos/3680896/pexels-photo-3680896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+* [segway image](https://images.unsplash.com/photo-1492558647888-45b0d471e2c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1120&q=80)
+* [Mountain biking image](https://images.unsplash.com/photo-1594942940158-af338884ac6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80)
+* [walking image](https://images.unsplash.com/photo-1597120590849-a1d5a743d155?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)
+* [hiking image](https://images.unsplash.com/photo-1606262482703-496941e54337?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80)
