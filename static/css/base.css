@@ -32,6 +32,7 @@ body {
     width: fit-content;
 }
 
+/* styling for book now button on home page */
 .book-now-button {
     background: #274E13;
     color: white;
@@ -41,6 +42,13 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+/* styling for checkout button in shopping bag */
+.btn-checkout {
+    background: #274E13;
+    color: white;
+    min-width: 260px;
 }
 
 /* quantity box outline on product pages */
