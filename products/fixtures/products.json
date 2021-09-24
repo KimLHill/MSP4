@@ -124,5 +124,131 @@
         "image_url": "https://images.unsplash.com/photo-1606262482703-496941e54337?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
         "image": "hiking.jpg"
       }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12010",
+        "name": "Paddle boarding",
+        "description": "Come and give one of the most popular watersports a go with stand up paddle boarding! We provide a high-quality inflatable SUP board with paddle and life jacket as standard. Suitable for ages 6+.",
+        "price": 10.00,
+        "category": 6,
+        "rating": 4.0,
+        "image_url": "https://images.unsplash.com/photo-1472745942893-4b9f730c7668?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80",
+        "image": "sup.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12011",
+        "name": "Tombstoning",
+        "description": "Looking for the ultimate adrenaline activity? Come and try tombstoning. Experience the thrill of climbing, scrmabling, jumping, diving and swimming in one action packed adventure through the forest exploring the lake from a totally different perspective. All safety kit and expereinced activity leader included as standard. You must be a confident swimmer to partake in this activity.",
+        "price": 60.00,
+        "category": 6,
+        "rating": 4.3,
+        "image_url": "https://images.unsplash.com/photo-1606330287762-9851d5dc6f16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1032&q=80",
+        "image": "tombstoning.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12012",
+        "name": "Guided wild swimming",
+        "description": "Experience the pleasure of swimming in the wild with the confidence of being in a small group with an experienced open water swim leader. ",
+        "price": 35.00,
+        "category": 6,
+        "rating": 4.3,
+        "image_url": "https://images.unsplash.com/photo-1578253734010-32bb761af7e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80",
+        "image": "swimming.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12013",
+        "name": "Level 2 MTB Ride Leadership Award",
+        "description": "A 2 day course learning through practical and theory based lessons how to safely lead group cycle rides on off-road terrain. ",
+        "price": 180.00,
+        "category": 8,
+        "rating": 4.3,
+        "image_url": "https://images.unsplash.com/photo-1621427259734-2c1167c9860d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+        "image": "mtb-leader.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12014",
+        "name": "Level 3 MTB Ride Leadership Award",
+        "description": "A 3 day course building upon the Level 2 award to enable you to safely lead group cycle rides on advanced trails with technical and remote terrain. ",
+        "price": 210.00,
+        "category": 8,
+        "rating": 4.3,
+        "image_url": "https://images.pexels.com/photos/163491/bike-mountain-mountain-biking-trail-163491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "image": "mtb-advanced.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12015",
+        "name": "Bike maintenance",
+        "description": "A 1 day course that will give you the knowledge and confidence to maintain your own bike and emergency repairs. This course covers: the drive train, gear setup, brakes, tyres and tubes. ",
+        "price": 80.00,
+        "category": 9,
+        "rating": 4.8,
+        "image_url": "https://images.pexels.com/photos/1154089/pexels-photo-1154089.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "image": "mtb-maintenance.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12016",
+        "name": "Emergency outdoor first aid",
+        "description": "A practical 1 day course that will give you essential life-saving skills taoilered to outdoor activities including walking and cycling.",
+        "price": 100.00,
+        "category": 10,
+        "rating": 5.0,
+        "image_url": "https://images.pexels.com/photos/5125748/pexels-photo-5125748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "image": "first-aid.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12017",
+        "name": "Specialist outdoor first aider",
+        "description": "A 3 day course that will build upon your first aid knowledge with practical, scenario-based learning covering first aid in remote and rural areas. Especially designed to cover activities such as climbing, hiking and mountain biking.",
+        "price": 350.00,
+        "category": 10,
+        "rating": 5.0,
+        "image_url": "https://images.pexels.com/photos/5125690/pexels-photo-5125690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "image": "specialist-fa.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp12018",
+        "name": "Watersports first aid",
+        "description": "A 2 day course that will build upon your first aid knowledge with practical, scenario-based learning covering watersports-related accidents and injuries including the specifics of dealing with drowning and spinal injuries.",
+        "price": 280.00,
+        "category": 10,
+        "rating": 5.0,
+        "image_url": "https://images.unsplash.com/photo-1582645502666-6727e63a027b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1119&q=80",
+        "image": "watersports-fa.jpg"
+      }
     }
 ]
