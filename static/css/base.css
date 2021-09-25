@@ -109,8 +109,10 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-/* Cursor styling when hovering on back to top icon button */
-.btt-link {
+/* Cursor styling when hovering on back to top icon button and update and remove buttons in bag */
+.btt-link,
+.update-link,
+.remove-item  {
     cursor: pointer;
 }
 
