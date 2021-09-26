@@ -37,6 +37,18 @@
     border: 1px solid #000;
 }
 
+/* Styling to black when form input conmpleted */
+select,
+select option {
+    color: #000000;
+}
+
+/* Styling set to grey when form input field is empty */
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 /* Background overlay for circular spinner */
 #loading-overlay {
 	display: none;
