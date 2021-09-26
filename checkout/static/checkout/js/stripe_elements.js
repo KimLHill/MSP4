@@ -52,6 +52,9 @@ form.addEventListener('submit', function(ev) {
     /* Prevent multiple submissions */
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
+    /* Fade form and trigger overlay when user clicks submit form  button */
+    $('#payment-form').fadeToggle(100);
+    $('#loading-overlay').fadeToggle(100);
     /* Send card details to Stripe */
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
