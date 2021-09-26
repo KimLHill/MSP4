@@ -187,4 +187,28 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-lg-7 text-right">
+            <!-- If user is logged in, show option to go to their profile -->
+            {% if from_profile %}
+                <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <!-- Icon from Font Awesome -->
+                        <i class="fas fa-angle-left"></i>
+                    </span>
+                    <span class="text-uppercase">Back to Profile</span>
+                </a>
+            {% else %}
+                <!-- IF user is not logged in, show option to continue shopping -->
+                <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <!-- Icon from Font Awesome -->
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span class="text-uppercase">Continue shopping</span>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
 {% endblock %}
