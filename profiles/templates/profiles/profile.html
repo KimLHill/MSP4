@@ -24,3 +24,9 @@
             </div>
         </div>
 {% endblock %}
+
+<!-- JS to change colour of country text when country selected -->
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}
