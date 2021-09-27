@@ -10,22 +10,21 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
-import dj_database_url
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ciei!2gx%2^uo+1!r7l@l4_rnxa=#fnm62@m4($ibp%1n#5ke@'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'sk_test_51JdjpeGCKuMmEVHDGipOXPy8VWCrIPe6DDoqHo1jgSoo4Cax6EnnbtWJRujTHZDOj3QRsoOFQUDzkm5Y7go0erxR00xjBEUezc')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['afan-forest-adventures.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -186,9 +185,6 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-EFAULT_FROM_EMAIL = 'afanforestadventures@example.com'
+DEFAULT_FROM_EMAIL = 'afanforestadventures@example.com'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
