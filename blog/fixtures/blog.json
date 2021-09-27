@@ -1,0 +1,24 @@
+[
+    {
+        "pk": 1,
+        "model": "blog.blog",
+        "fields": {
+            "name": "The benefits of mountain biking",
+            "author": "Jason, K.",
+            "description": "Mountain biking is a fun activity that helps to keep you fit and healthy through cardiovascular exercise that burns calories; through bike handling skills that improve your balance and hand-eye coordination and through the benefits associated with being outdoors in the fresh air and maongst nature which are good for mental wellbeing.",
+            "image_url": "https://images.pexels.com/photos/2270328/pexels-photo-2270328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "image": "MTB_benefits.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "blog.blog",
+        "fields": {
+            "name": "Why explore the Afan Forest?",
+            "author": "Gerry, S.",
+            "description": "The Afan forest covers 48 square miles and is mostly traffic-free cycle, walking and hiking trails providing a safe place to exercise and explore. The Afan forest has lots of activities available to you from walking, hiking and cycling trails to a lake for watersports, a cafe for refreshments and a campsite to spend the night. ~The Afan Forest really is the best place to get away from the hustle and bustle of ervyday life and unwind.",
+            "image_url": "https://images.pexels.com/photos/1112186/pexels-photo-1112186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "image": "why_afan.jpg"
+        }
+    }
+]

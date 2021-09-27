@@ -68,3 +68,5 @@ The images used on my wireframes and website are from:
 * [Emergency outdoor first aid image](https://images.pexels.com/photos/5125748/pexels-photo-5125748.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [specialist outdoor first aid image](https://images.pexels.com/photos/5125690/pexels-photo-5125690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [watersports first aid image](https://images.unsplash.com/photo-1582645502666-6727e63a027b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1119&q=80)
+* [MTB benefits blog image](https://images.pexels.com/photos/2270328/pexels-photo-2270328.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+* [why afan forest blog image](https://images.pexels.com/photos/1112186/pexels-photo-1112186.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
