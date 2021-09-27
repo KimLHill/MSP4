@@ -30,6 +30,21 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 * [jQuery](https://api.jquery.com/) javascript library used for my javascript code denoted by $ prefix on script.js.
 * [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) to produce the secure passwords used in my project.
 * [AWS Amazon Web Services s3](https://aws.amazon.com/) cloud-based storage service to store my static files.
+* [Balsamiq](https://balsamiq.com/) used to create my wireframes.
+* Jinja - templating language for some of my Python code denoted by {% %}.
+* [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) used to check the validity of my html code for all .html pages.
+* [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/#validate_by_input) used to check the validity of my css code for the style.css file.
+* [JSHint](https://jshint.com/) used to check the validity of my javascript code for the script.js files.
+* [PEP8 Online](http://pep8online.com/) used to check the PEP8 compliance of my Python code.
+* [Am I responsive](http://ami.responsivedesign.is/#) used to check the responsiveness of my design on different screen sizes and for creating the first image in this README file.
+* [Paint 3D](https://microsoft-paint-3d.en.softonic.com/) used to crop the screenshots of images added to this README.md file and testing.md file.
+* [Google Chrome Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en) used to generate Lighthouse reports on the performance of all my web pages once the project was deployed.
+* [Heroku](https://www.heroku.com/what) to deploy my website.
+* [Gitpod](https://www.gitpod.io/) to write my project code.
+* [GitHub](https://github.com/) remote repository where my project is stored.
+* [Font Awesome](https://fontawesome.com/) for the icons used throughout the website.
+* [Bootstrap](https://getbootstrap.com/) to create a responsive website across mobile, tablet, desltop and large screen devices.
+* [Bulma]()
 
 
 ### Media ###
