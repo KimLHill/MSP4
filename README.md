@@ -29,6 +29,7 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 * Javascript used to make my website interactive with the carousel and collapsible accordian.
 * [jQuery](https://api.jquery.com/) javascript library used for my javascript code denoted by $ prefix on script.js.
 * [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) to produce the secure passwords used in my project.
+* [AWS Amazon Web Services s3](https://aws.amazon.com/) cloud-based storage service to store my static files.
 
 
 ### Media ###
