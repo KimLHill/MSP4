@@ -23,6 +23,13 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 * I am visitor to Afan Forest Adventures, I want to know their contact details, so that I can ask them my questions.
 
 
+### Technologies Used ###
+* HTML5 used for the .html pages
+* CSS used to style the html pages.
+* Javascript used to make my website interactive with the carousel and collapsible accordian.
+* [jQuery](https://api.jquery.com/) javascript library used for my javascript code denoted by $ prefix on script.js.
+* [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) to produce the secure passwords used in my project.
+
 
 ### Media ###
 The images used on my wireframes and website are from:
