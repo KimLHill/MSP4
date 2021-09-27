@@ -24,7 +24,7 @@ def blog(request):
 def blog_detail(request, blog_id):
     """ A view to show aindividual blog page """
 
-    product = get_object_or_404(Product, pk=blog_id)
+    blog = get_object_or_404(Blog, pk=blog_id)
 
     context = {
         'blog': blog,
@@ -38,14 +38,14 @@ def add_blog(request):
     # Add a blog to the site 
     if not request.user.is_superuser:
         # Only superusers can add products
-        messages.error(request, 'Sorry, only store owners add a blog.')
+        messages.error(request, 'Sorry, only store owners can add a blog.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = BlogForm(request.POST, request.FILES)
         if form.is_valid():
             # If valid, save form
-            product = form.save()
+            blog = form.save()
             # Show success message
             messages.success(request, 'Successfully added blog!')
             # Take user to that blog's details page
@@ -54,7 +54,7 @@ def add_blog(request):
             # If invalid, show error message
             messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
     else:
-        form = ProductForm()
+        form = BlogForm()
         
     template = 'blog/add_blog.html'
     context = {
@@ -65,14 +65,14 @@ def add_blog(request):
 
 
 @login_required
-def edit_blog(request, product_id):
+def edit_blog(request, blog_id):
     """ Edit a blog in the store """
     if not request.user.is_superuser:
         # Only superusers can edit products
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    product = get_object_or_404(Product, pk=blog_id)
+    blog = get_object_or_404(Blog, pk=blog_id)
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
@@ -95,18 +95,18 @@ def edit_blog(request, product_id):
 
 
 @login_required
-def delete_product(request, product_id):
+def delete_blog(request, blog_id):
     if not request.user.is_superuser:
-        # Only superusers can delete products
+        # Only superusers can delete blogs
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    # Get product
-    product = get_object_or_404(Product, pk=product_id)
-    # Delete product
-    product.delete()
-    # Product successfully deleted message
-    messages.success(request, 'Product deleted!')
+    # Get blog
+    blog = get_object_or_404(Blog, pk=blog_id)
+    # Delete blog
+    blog.delete()
+    # Blog successfully deleted message
+    messages.success(request, 'Blog deleted!')
     # Redirect back to products page
-    return redirect(reverse('products'))
+    return redirect(reverse('blog'))
 
