@@ -116,6 +116,32 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* ---------------------------------- Footer */
+
+footer {
+    background-color: #000;
+    margin-top: 30px;
+}
+.footer-title {
+    color: #28a745;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+.footer-text {
+    color: #fff;
+    font-size: 1.1rem;
+}
+.footer-icons>.row>.col-4>a>i,
+.footer-text a {
+    transition: all 0.5s ease 0s;
+}
+.footer-icons>.row>.col-4>a>i:hover,
+.footer-icons>.row>.col-4>a>i:focus,
+.footer-text a:hover,
+.footer-text a:focus {
+    font-weight: bolder;
+}
+
 /* -------------------------------- Toasts */
 .message-container {
     position: fixed;

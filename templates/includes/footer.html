@@ -1,0 +1,78 @@
+{% load static %}
+
+<footer>
+    <div class="container d-flex justify-content-around">
+        <div class="row w-100 p-4">
+
+            <!-- Find us -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="row">
+                    <div class="col-12 footer-title">
+                        Find us
+                    </div>
+                    <div class="col-12 footer-text">
+                        <p>Afan Forest Adventures<br>Forest Road<br>Cymner<br>SA13 3HG</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Follow us -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="row">
+                    <div class="col-12 footer-title">
+                        Follow us
+                    </div>
+                    <div class="col-12 footer-icons ">
+                        <div class="row w-50">
+                            <div class="col-4">
+                                <a href="https://twitter.com/" style="color: #fff" target="_blank">
+                                    <i class="medium fab fa-twitter-square" ></i>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.facebook.com" style="color: #fff" target="_blank">
+                                    <i class="medium fab fa-facebook-square"></i>
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="https://www.instagram.com/" style="color: #fff" target="_blank">
+                                    <i class="medium fab fa-instagram-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Footer Copyright -->
+                    <div class="col-12 footer-text">
+                        <i class="far fa-copyright"></i> Afan Forest Adventures <span id="footer-date"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact us -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="row">
+                    <div class="col-12 footer-title">
+                        Contact us
+                    </div>
+                    <div class="col-12 footer-text">
+                        <!-- Icon from Font Awesome-->
+                        <i class="fas fa-phone"></i>
+                        <p>01639 862420</p>
+                    </div>
+                    <div class="col-12 footer-text">
+                        <!-- Icon from Font Awesome-->
+                        <i class="fas fa-envelope"></i>
+                        <p>afanforestadvs@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(function() {
+        // Get Current Year for Footer
+        document.getElementById("footer-date").innerHTML = new Date().getFullYear();
+    });
+</script>
