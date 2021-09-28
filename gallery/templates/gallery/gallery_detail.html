@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <!-- White background overlay to hide main image -->
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Blog image -->
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container my-5">
+                    {% if gallery.image %}
+                        <!-- Open image in new window -->
+                        <a href="{{ gallery.image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ gallery.image.url }}" alt="{{ gallery.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ gallery.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- Image details -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="product-details-container mb-5 mt-md-5">
+                    <!-- Get image name -->
+                    <p class="mb-0">{{ gallery.name }}</p>
+                    <!-- Get image author -->
+                    <p class="lead mb-0 text-left font-weight-bold">{{ gallery.author }}</p>
+                    <!-- If superuser, show edit and delete options buttons -->
+                    {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a href="{% url 'edit_gallery' gallery.id %}">Edit</a> | 
+                        <a class="text-danger" href="{% url 'delete_gallery' gallery.id %}">Delete</a>
+                    </small>
+                    {% endif %}
+                    <!-- Get image description -->
+                    <p class="mt-3">{{ gallery.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
