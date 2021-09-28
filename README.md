@@ -46,6 +46,8 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 * [Bootstrap](https://getbootstrap.com/) to create a responsive website across mobile, tablet, desltop and large screen devices.
 * [Bulma]()
 
+### **Testing**
+The testing that I undertook on my project is detailed in the [testing.md](testing.md) file. 
 
 ### Media ###
 The images used on my wireframes and website are from:
