@@ -55,10 +55,14 @@ Having created the user stories so that I knew who I was designing my website fo
         * [SUP Cardiff](https://www.supcardiff.co.uk/sup-rental/)
         * [Monmouth Canoe](https://www.monmouthcanoe.co.uk/canoe-kayak/canoe-kayak-guided-river-trips/)
 
-    This helped me to gather information on what these websites offer their users; the pros and cons that I liked as a user of their website and to identify the features and information they provided. This gave me ideas of how to address my user’s needs but also how I could further improve my user’s experience to add value to the Whey Too Tasty website.
+    This helped me to gather information on what these websites offer their users; the pros and cons that I liked as a user of their website and to identify the features and information they provided. This gave me ideas of how to address my user’s needs but also how I could further improve my user’s experience to add value to the Afan Forest Adventures website. 
+    
+    This gave me the following ideas:
+    * Create an online shop with the products sold by Afan Forest Adventures.
+    * Create a blog 
 
 2.	**Scope Plane:**
-    * When addressing the scope plane, I focused on what features were to be included on the website and its key functionality to meet the all the user’s needs. I also needed to combine these with Stripe as per the requirements for my Code Institute MSP4. I kept in mind the question of: Why would a user want this?
+    * When addressing the scope plane, I focused on what features were to be included on the website and its key functionality to meet the all the user’s needs. I also needed to combine these with Stripe and Django as per the requirements for my Code Institute MSP4. I kept in mind the question of: Why would a user want this?
 	    * Requirements: there would be 3 types of user categories - guest (anonymous users of the site who aren't logged to a profile), customers (who have created an account) and superusers (admin for Afan Forest Adventures).
             * All users (guest, customers and superuser): Learn about the business, search for product, read the products (campsite, activity, courses), read product details on product if selected, update quanitity of product qanted, add product to bag, update shopping bag by adjusting product quantity, delete item from shopping bag, make purchase through checkout, view order summary, read blog, read blog details on blog if selected, read (view) gallery, read image details if gallery image selected and create an account.
             * Customers and superusers: have the additional requirments of beind able to login to their account and view past orders.
@@ -70,6 +74,7 @@ Having created the user stories so that I knew who I was designing my website fo
         * CRUD functions: To achieve the above requirements and key features I needed to implement the Create, Read, Update & Delete (CRUD) functions for my database. I decided to use them in the following ways:
             1. Create: 
                 * Create a new user (account)
+                * Allow superuser to create (add) a product
             2. Read:
                 * To search, find and read products in the database
                 * To read blogs in the database
@@ -109,11 +114,65 @@ Having created the user stories so that I knew who I was designing my website fo
 * [GitHub](https://github.com/) remote repository where my project is stored.
 * [Font Awesome](https://fontawesome.com/) for the icons used throughout the website.
 * [Bootstrap](https://getbootstrap.com/) to create a responsive website across mobile, tablet, desltop and large screen devices.
-* [Bulma]()
-* [Stripe]()
+* [Bulma](https://bulma.io/) css framework for styling font awesome icons.
+* [Stripe](https://stripe.com/) to handle secure payments.
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/index.html) for user authentication, registration and account management.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) to produce and style the forms.
+* [Django Countries](https://pypi.org/project/django-countries/) for the country codes to ensure they were in an acceptable format for Stripe.
+* [Pillow](https://pillow.readthedocs.io/en/stable/) to allow images to work in the database.
+* [SQLite](https://www.sqlite.org/index.html) database.
+* [Heruko PostgresSQL](https://www.heroku.com/postgres) database.
+* [Gunicorn](https://gunicorn.org/) used in the deployment to Heroku.
+* [Gmail](https://www.google.com/intl/sv/gmail/about/#) to to send order confirmation emails to users.
 
 ### **Testing**
 The testing that I undertook on my project is detailed in the [testing.md](testing.md) file. 
+
+### **Using My Project**
+If you would like to use or further develop this project, you can make a clone by completing the following steps. 
+#### Prerequisites ####
+You will need to have the following setup:
+* An IDE (such as Gitpod)
+* Python - programming language for the backened
+* PIP - package installer for Python
+* Git for project version control
+* AWS account with a set up S3 Bucket
+* Stripe Account for payment functionality
+* Gmail Account for emails
+
+#### Fork the repository ####
+To make a copy of my project to your GitHub account, you can fork a copy of my project, with the following steps:
+* Log in to your GitHub account (or create a new account).
+* Search for my repository called KimLHill/MSP4.
+* In the far right-hand corner of the screen at the top of the repository, click the ‘fork’ button next to the fork icon.
+Further information about forking a repository can be found [here](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
+
+#### Clone My Project ####
+To run my project locally you can clone the project, with the following steps:
+* Open GitHub.
+* Select my project repository called KimLHill/MSP4.
+* Click on the green ‘Code’ button.
+* Click the clipboard icon next to the url to copy the url link.
+* Open your IDE.
+* Change the current working directory to the location where you want the cloned directory.
+* Type git clone, and then paste the url link you copied in step 4.
+* Press enter to create your local clone.
+Alternative methods of cloning my project can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+#### Local Deployment ####
+Follow these steps to deploy locally:
+* Install the required dependencies with command "pip3 install -r requirements.txt".
+* In your [Gitpod account](https://gitpod.io/variables) select the variables tab and enter the following Environment Variables:
+    * Name "SECRET_KEY"  Value <your key> Scope "*/*"
+    * Name "STRIPE_SECRET_KEY"  Value <your key> Scope "*/*"
+    * Name "STRIPE_PUBLIC_KEY"  Value <your key> Scope "*/*"
+    * Name "STRIPE_WH_SECRET"  Value <your key> Scope "*/*"
+* Make migrations to create the local database with command "python3 manage.py makemigrations" then "python3 manage.py migrate".
+* Import the fixture folders with command "python3 manage.py loaddata categories" then "python3 manage.py loaddata products" then "python3 manage.py loaddata blog" then python3 manage.py loaddata gallery".
+* Create a superuser with command "python3 manage.py createsuperuser" and follow the terminal instructions.
+* Run the server with command "python3 manage.py runserver" and the project is now deployed locally.
+
+
 
 ### Media ###
 The images used on my wireframes and website are from:

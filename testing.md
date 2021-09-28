@@ -42,7 +42,19 @@ This time the error was having changed the 'edit' and 'delete' instead of the 'b
 ![gallery-good-code](https://user-images.githubusercontent.com/74603013/135093880-5788e2a9-37a0-4ea2-98e7-8ee939191c6e.png)
 
 This fixed the error and the Gallery page displayed correctly.
+
+## **Problems Resolved During Deployment**
 * A major problem I encountered was with deploying to Heroku. I could run the project locally through Gitpod and that worked fine but I was getting build error when trying to deploy to Heroku so my project wouldn't build and wouldn't deploy. I spent a day trying to resolve my error by rechecking procfile, Afan settings, checking views, models and config variables. I then saught help from the Code Institute Tutor Support Team. The build log detailed the error.
 ![build-error-message](https://user-images.githubusercontent.com/74603013/135090269-ddb99065-207e-41c6-ae52-59eb783d8c1e.png)
 The error isn't very clear and researching the error didn't find any solutions. I had also checked the Code Institute Slack channel but couldn't find a solution there. Three tutors from Code Institute helped to check my code and confirmed that my code seemed to be correct and nothing was missing. This made us think it was a problem with the AWS, I re-entered the ACCESS_KEY_ID and SECRET_ACCESS_KEY but still the error remained. I then decided to recreate my AWS bucket, policy, user and group. I followed the Code Institute Boutique Ado tutorials very closely! This gave me a new ACCESS_KEY_ID and SECRET_ACCESS_KEY to access the new bucket. I replaced the old config variables in heroku with these new ones and did a rebuild. This time the build was successful and my app deployed. 
 ![build-success](https://user-images.githubusercontent.com/74603013/135091176-65cb88e5-a227-4d9f-9211-50a1a96a9260.png)
+* Having deployed my project to Heroku, when testing the features I found that both the blog and gallery failed to display and instead showed the folloing error:
+
+![heroku-blog-error](https://user-images.githubusercontent.com/74603013/135150668-57073777-1fba-4224-b529-40fbfabc8460.png)
+
+but the gallery and blog pages were fine in the localhost run from Gitpod:
+
+![gitpod-blogs-success](https://user-images.githubusercontent.com/74603013/135150841-0c5980ac-f4ff-4e17-b132-4b39cacc49fb.png)
+
+
+
