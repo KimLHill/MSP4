@@ -9,10 +9,10 @@ from .forms import GalleryForm
 def gallery(request):
     """ A view to show gallery page """
 
-    gallery = Gallery.objects.all()
+    gallerys = Gallery.objects.all()
     
     context = {
-        'gallery': gallerys,
+        'gallerys': gallerys,
     }
 
     return render(request, 'gallery/gallery.html', context)
