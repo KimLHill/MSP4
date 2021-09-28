@@ -5,22 +5,87 @@ This project has been created for my Milestone Project 4 for the Full Stack Deve
 
 Afan Forest Adventures is a fictional website for a fictional outdoor activity company. The aim is to provide a website where users can find and buy activities sold by Afan Forest Adventures, with the prupose of increasing the sales for the company. Users will interact with the website through being able to find, book and pay, edit their bookings, view current and past bookings and create reviews of past bookings.
 
+My deployed project can be viewed live [here](https://afan-forest-adventures.herokuapp.com/).
+
 ## UX ## 
 
 ### Main Aims ### 
-* To create a website that allows users to find an outdoor activity, book the quantity required and pay in a simple, easy-to-follow process.
-* To create a website that provides a quick and simple way for members to view and edit their upcoming bookings from their member account.
-* To create a website that provides a quick and simple way for members to leave reviews on past bookings from their member account, to encourage members to leave reviews which may help to increase sales of the product.
+* To create a website that allows users to find a product, book the quantity required and pay in a simple, easy-to-follow process.
+* To create a full stack website where the siteowner/admin can satisfy all CRUD functions, allowing them to Create, Read, Update and Delete products, blog posts and gallery images.
+* To create a full stack website where the site users can Create, Update and Delete their shopping basket and Read the blog and gallery.
+* To implement Stripe to take payments.
+* To create a website that provides a quick and simple way for members to view and their order from their member account.
 * To make a website that uses Javascript to allow the website users to interact with the website.
 * To design a website that is both visually appealing and easy to navigate for the wide range of potential users.
 * To create a website that provides a good user experience on mobile, tablet and desktop devices.
 
 ### User Stories ###
-* I am the owner of the Afan Forest Adventures, I want a website that allows users to quickly book and pay for my products, to increase my sales.
+#### Potential user's perspective ####
 * I am a potential customer, I want to know what activities are offered, so I can decide if I want to buy any.
 * I am a customer who will be visiting Afan Forest Adventures, I want to know what facilities are available, so I can plan my day/stay.
 * I am a MTB instructor, I want to know what courses Afan Forest Adventures offer, so I can improve my qualifications.
 * I am visitor to Afan Forest Adventures, I want to know their contact details, so that I can ask them my questions.
+
+#### User's perspective ####
+* I am a customer who has booked an activity, I want to view my order history, so I can see what I have booked.
+* I am a customer, I want a quick and simple way of making my purchase.
+* I am a customer who is booking a course that is paid by my employer, I want a copy of my order, so I can reclaim the cost of the course.
+
+#### Site owner's perspective ####
+* I am the admin for Afan Forest Adventures, I want a simple method of managing products, so I can upload, edit and delete what we offer.
+* I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.
+* I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.
+
+### The 5 Planes of UX ###
+Having created the user stories so that I knew who I was designing my website for, I then followed the user centred design process to create a website that would answer the above user stories.
+1.	**Strategy Plane:**
+    * When addressing the strategy plane, I focused on who the website users were likely to be and the objectives the website needed to meet to attract these users. I kept in mind the question: Why is the Afan Forest Adventures website so special?
+        * Reason for the website’s existence – To promote Afan Forest Adventures' business and to allow their customers to purchase their products online.
+        * Culture of the audience – people wanting to visit the Afan Forest which may include:
+            1.	People wanting to stay the night/holiday.
+            2.	People wanting to take one of the courses offered by Afan Forest Adventures.
+            3.	People who enjoy the outdoors.
+            4.	People who want to relax and unwind.
+            5.	People looking to try an activity for the first time.
+            6.  People who enjoy outdoor activities.
+        * User demographic – the website is open to everyone and Afan Forest Adventures is likely to have a large user audience with a variation in understanding of the Afan Forest, outdoor activities etc.  The website branding therefore needs to appeal visually to all ages and genders. It must also be able to be navigated easily as the users could have a wide range of computer competency levels.
+    * I researched existing websites that promote the Afan Forest as well as outdoor activity websites including:
+        * [Afan Forest Park](https://dramaticheart.wales/home/discover-our-area/attractions/afanforestpark/
+        * [Bryn Teg House](https://brynteghouse.com/mountain-biking-afan-forest-park/)
+        * [SUP Cardiff](https://www.supcardiff.co.uk/sup-rental/)
+        * [Monmouth Canoe](https://www.monmouthcanoe.co.uk/canoe-kayak/canoe-kayak-guided-river-trips/)
+
+    This helped me to gather information on what these websites offer their users; the pros and cons that I liked as a user of their website and to identify the features and information they provided. This gave me ideas of how to address my user’s needs but also how I could further improve my user’s experience to add value to the Whey Too Tasty website.
+
+2.	**Scope Plane:**
+    * When addressing the scope plane, I focused on what features were to be included on the website and its key functionality to meet the all the user’s needs. I also needed to combine these with Stripe as per the requirements for my Code Institute MSP4. I kept in mind the question of: Why would a user want this?
+	    * Requirements: there would be 3 types of user categories - guest (anonymous users of the site who aren't logged to a profile), customers (who have created an account) and superusers (admin for Afan Forest Adventures).
+            * All users (guest, customers and superuser): Learn about the business, search for product, read the products (campsite, activity, courses), read product details on product if selected, update quanitity of product qanted, add product to bag, update shopping bag by adjusting product quantity, delete item from shopping bag, make purchase through checkout, view order summary, read blog, read blog details on blog if selected, read (view) gallery, read image details if gallery image selected and create an account.
+            * Customers and superusers: have the additional requirments of beind able to login to their account and view past orders.
+            * Superusers: have the additional requirments of managing the site which includes being able to edit (for example to adjust the price), delete products and add new products; edit, delete and add blog posts; edit, delete and add gallery images.
+        * From the above requirements, I identified the following Key features: 
+            * All users: a simple and easy method to search for products, to navigate around the site and select categories of products, to sort the products on the page (e.g. by lowest price first), to create an account, to view the blog and gallery, to view more product details, to adjust quantity of a product, to ad to shopping bag, to adjust items in the shopping bag and to checkout.
+            * Customers and superusers: to login to account and view order history.
+            * Superusers: to manage products, blog and gallery.
+        * CRUD functions: To achieve the above requirements and key features I needed to implement the Create, Read, Update & Delete (CRUD) functions for my database. I decided to use them in the following ways:
+            1. Create: 
+                * Create a new user (account)
+            2. Read:
+                * To search, find and read products in the database
+                * To read blogs in the database
+                * To view gallery images in the database
+            3. Update:
+                * Update quantity of a product on product details page
+                * Update quantity of a product in shopping bag
+                * Update user profile information from checkout form
+                * Allow superuser to edit products
+                * Allow superuser to edit blogs
+                * Allow superuser to edit gallery inmages
+            4. Delete: 
+                * Delete a product from shopping bag
+                * Allow superuser to delete a product
+                * Allow superuser to delete a blog post
+                * Allow superuser to delete a gallery image
 
 
 ### Technologies Used ###
@@ -29,7 +94,7 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 * Javascript used to make my website interactive with the carousel and collapsible accordian.
 * [jQuery](https://api.jquery.com/) javascript library used for my javascript code denoted by $ prefix on script.js.
 * [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) to produce the secure passwords used in my project.
-* [AWS Amazon Web Services s3](https://aws.amazon.com/) cloud-based storage service to store my static files.
+* [AWS Amazon Web Services](https://aws.amazon.com/) cloud-based storage service to store my static and media files.
 * [Balsamiq](https://balsamiq.com/) used to create my wireframes.
 * Jinja - templating language for some of my Python code denoted by {% %}.
 * [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) used to check the validity of my html code for all .html pages.
@@ -45,6 +110,7 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 * [Font Awesome](https://fontawesome.com/) for the icons used throughout the website.
 * [Bootstrap](https://getbootstrap.com/) to create a responsive website across mobile, tablet, desltop and large screen devices.
 * [Bulma]()
+* [Stripe]()
 
 ### **Testing**
 The testing that I undertook on my project is detailed in the [testing.md](testing.md) file. 

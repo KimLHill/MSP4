@@ -1,3 +1,20 @@
+
+#### Potential user's perspective ####
+* I am a potential customer, I want to know what activities are offered, so I can decide if I want to buy any.
+* I am a customer who will be visiting Afan Forest Adventures, I want to know what facilities are available, so I can plan my day/stay.
+* I am a MTB instructor, I want to know what courses Afan Forest Adventures offer, so I can improve my qualifications.
+* I am visitor to Afan Forest Adventures, I want to know their contact details, so that I can ask them my questions.
+
+#### User's perspective ####
+* I am a customer who has booked an activity, I want to view my order history, so I can see what I have booked.
+* I am a customer, I want a quick and simple way of making my purchase.
+* I am a customer who is booking a course that is paid by my employer, I want a copy of my order, so I can reclaim the cost of the course.
+
+#### Site owner's perspective ####
+* I am the admin for Afan Forest Adventures, I want a simple method of managing products, so I can upload, edit and delete what we offer.
+* I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.
+* I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.
+
 ## **Problems Resolved During Testing**
 * Having run the “loaddata” commands and “runserver”, the image for “emergency outdoor first aid” and “bike maintenance” weren’t showing on the website. I found that both of these errors were due to having accidentally used different names in the products.json file and the corresponding image in the media file. I found that I had put “first-aid.jpg” and “mtb-maintenance.jpg” as my images in products.json but had called them “first_aid.jpg” and “bike-maintenance.jpg” in the media file. I changed the names to match and re-ran the “loaddata products” command to fix these errors.
 * The pricing for the products and shopping bag was displaying in USD currency. This was because I had followed the Code Institute Boutique Ado tutorial to write my code and they had used $ currency. However, as my project was aimed at British users, I changed the currency to display in GBP £. 
