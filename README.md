@@ -1,15 +1,15 @@
-# Code Institute: Milestone Project 4 #
+# **Code Institute: Milestone Project 4** #
 
-## Afan Forest Adventures ##
+## **Afan Forest Adventures** ##
 This project has been created for my Milestone Project 4 for the Full Stack Development Diploma at The Code Institute. The purpose of the project is to create a full-stack site using HTML, CSS, Javascript, Python, Django, a relational database and Stripe payments.
 
 Afan Forest Adventures is a fictional website for a fictional outdoor activity company. The aim is to provide a website where users can find and buy activities sold by Afan Forest Adventures, with the prupose of increasing the sales for the company. Users will interact with the website through being able to find, book and pay, edit their bookings, view current and past bookings and create reviews of past bookings.
 
-My deployed project can be viewed live [here](https://afan-forest-adventures.herokuapp.com/).
+#### **My deployed project can be viewed live [here](https://afan-forest-adventures.herokuapp.com/).**
 
-## UX ## 
+## **UX** 
 
-### Main Aims ### 
+### **Main Aims** 
 * To create a website that allows users to find a product, book the quantity required and pay in a simple, easy-to-follow process.
 * To create a full stack website where the siteowner/admin can satisfy all CRUD functions, allowing them to Create, Read, Update and Delete products, blog posts and gallery images.
 * To create a full stack website where the site users can Create, Update and Delete their shopping basket and Read the blog and gallery.
@@ -19,8 +19,8 @@ My deployed project can be viewed live [here](https://afan-forest-adventures.her
 * To design a website that is both visually appealing and easy to navigate for the wide range of potential users.
 * To create a website that provides a good user experience on mobile, tablet and desktop devices.
 
-### User Stories ###
-#### Potential user's perspective ####
+### **User Stories**
+#### Potential user's perspective
 * I am a potential customer, I want to know what activities are offered, so I can decide if I want to buy any.
 * I am a customer who will be visiting Afan Forest Adventures, I want to know what facilities are available, so I can plan my day/stay.
 * I am a MTB instructor, I want to know what courses Afan Forest Adventures offer, so I can improve my qualifications.
@@ -36,9 +36,9 @@ My deployed project can be viewed live [here](https://afan-forest-adventures.her
 * I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.
 * I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.
 
-### The 5 Planes of UX ###
+### **The 5 Planes of UX**
 Having created the user stories so that I knew who I was designing my website for, I then followed the user centred design process to create a website that would answer the above user stories.
-1.	**Strategy Plane:**
+1.	#### **Strategy Plane:**
     * When addressing the strategy plane, I focused on who the website users were likely to be and the objectives the website needed to meet to attract these users. I kept in mind the question: Why is the Afan Forest Adventures website so special?
         * Reason for the website’s existence – To promote Afan Forest Adventures' business and to allow their customers to purchase their products online.
         * Culture of the audience – people wanting to visit the Afan Forest which may include:
@@ -93,7 +93,7 @@ Having created the user stories so that I knew who I was designing my website fo
                 * Allow superuser to delete a gallery image
 
 
-### Technologies Used ###
+### **Technologies Used**
 * HTML5 used for the .html pages
 * CSS used to style the html pages.
 * Javascript used to make my website interactive with the carousel and collapsible accordian.
@@ -172,9 +172,16 @@ Follow these steps to deploy locally:
 * Create a superuser with command "python3 manage.py createsuperuser" and follow the terminal instructions.
 * Run the server with command "python3 manage.py runserver" and the project is now deployed locally.
 
+### **Credits**
+* I used this [Stackoverflow post](https://stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page) to find the mt-auto Bootstrap flexbox class to fix the footer to the bottom of the page.
+
+### **Acknowledgements**
+* My Code Institute mentor Seun Owonikoko whose feedback throughout the project influenced my website design, content and features.
+* The Code Institute tutorial videos, especially from the 'Boutique Ado project'.
+* My family and friends who tested my website on their devices and provided feedback for improvements.
 
 
-### Media ###
+### **Media**
 The images used on my wireframes and website are from:
 * [home hero image](https://images.pexels.com/photos/397096/pexels-photo-397096.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)
 * [camping image](https://images.pexels.com/photos/6324131/pexels-photo-6324131.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)
