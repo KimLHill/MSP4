@@ -3,6 +3,8 @@
         "pk": 1,
         "model": "gallery.gallery",
         "fields": {
+            "name": "Picnic time!",
+            "author": "Jason, K.",
             "description": "Enjoying a picnic in the Afan forest",
             "image_url": "https://images.pexels.com/photos/8208715/pexels-photo-8208715.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
             "image": "picnic.jpg"
@@ -12,6 +14,8 @@
         "pk": 2,
         "model": "gallery.gallery",
         "fields": {
+            "name": "Squirrel",
+            "author": "George, C.",
             "description": "Squirrel in the Afan forest",
             "image_url": "https://images.pexels.com/photos/5643876/pexels-photo-5643876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "image": "squirrel.jpg"
@@ -21,6 +25,8 @@
         "pk": 3,
         "model": "gallery.gallery",
         "fields": {
+            "name": "Autumn",
+            "author": "Kayley, L.",
             "description": "Autumn walk in the Afan Forest",
             "image_url": "https://images.pexels.com/photos/3107873/pexels-photo-3107873.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "image": "autumn-walk.jpg"
@@ -30,6 +36,8 @@
         "pk": 4,
         "model": "gallery.gallery",
         "fields": {
+            "name": "Bluebells",
+            "author": "Dan, M.",
             "description": "Spring in the Afan Forest",
             "image_url": "https://images.pexels.com/photos/8355200/pexels-photo-8355200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "image": "spring.jpg"
@@ -39,6 +47,8 @@
         "pk": 5,
         "model": "gallery.gallery",
         "fields": {
+            "name": "Winter snow",
+            "author": "Jason, K.",
             "description": "Winter in the Afan Forest",
             "image_url": "https://images.pexels.com/photos/163756/park-winter-russia-city-park-163756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "image": "winter.jpg"
@@ -48,6 +58,8 @@
         "pk": 6,
         "model": "gallery.gallery",
         "fields": {
+            "name": "Wildlife",
+            "author": "Jason, K.",
             "description": "A wild deer in the Afan Forest",
             "image_url": "https://images.pexels.com/photos/1035367/pexels-photo-1035367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
             "image": "deer.jpg"
