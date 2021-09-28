@@ -5,6 +5,8 @@ from .models import Gallery
 
 class GalleryAdmin(admin.ModelAdmin):
     list_display = (
+        'name',
+        'author',
         'description',
         'image',
     )
