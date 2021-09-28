@@ -7,12 +7,12 @@ from .forms import GalleryForm
 
 # View for gallery page
 def gallery(request):
-    """ A view to show blog page """
+    """ A view to show gallery page """
 
     gallery = Gallery.objects.all()
     
     context = {
-        'gallery': galleries,
+        'gallery': gallerys,
     }
 
     return render(request, 'gallery/gallery.html', context)

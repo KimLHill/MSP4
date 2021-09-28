@@ -2,11 +2,6 @@ from django.db import models
 
 # Blog model. Requires name, author and description. 
 class Gallery(models.Model):
-
-    # Change gallerys to galleries
-    class Meta:
-        verbose_name_plural = 'Galleries'
-
     name = models.CharField(max_length=254)
     author = models.CharField(max_length=254)
     description = models.TextField()
