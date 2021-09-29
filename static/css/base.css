@@ -48,13 +48,14 @@ body {
     text-transform: uppercase;
 }
 
-
+/* Font styling for main header on home page */
 .callout-font{
     font-size: 50px !important;
     text-transform: uppercase;
     color: white; 
 }
 
+/* Font styling for secondary page header and text on home page */
 .index-font {
     text-transform: uppercase;
 }
@@ -63,13 +64,14 @@ body {
     width: fit-content;
 }
 
-/* styling for book now button on home page */
+/* styling for book your adventure button on home page */
 .book-now-button {
     background: #274E13;
     color: white;
     min-width: 260px;
 }
 
+/* Styling for black buttons */
 .btn-black {
     background: black;
     color: white;
@@ -105,6 +107,11 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+/* Styling for dropdown navbar menu items */
+.dropdown-menu {
+    background-color: lightgreen;
 }
 
 /* White background on product pages */

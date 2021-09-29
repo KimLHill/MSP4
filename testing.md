@@ -37,6 +37,11 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 * Clicking on the Afan Forest Adventures logo in the navbar returns the user back to the home page.
 * Checked the mouse cursor changed from an arrow to a pointed finger when the user could click/swipe on an item they could select like navbar buttons, products items, blog items and gallery items etc.
 
+### **Styling of navbar**
+* I clicked on the secondary navbar tabs and ensured that the correct dropdown menu appeared with the corresponding category options, had the lightgreen background colour styling and the links changed to a white background when hovered over. The navbar worked as expected.
+
+![dropdown-navbar-styling](https://user-images.githubusercontent.com/74603013/135285484-e3c27d54-5be2-4925-8504-32100c20c4b4.png)
+
 ### **Testing toast-success**
 * I added an item to my basket to ensure the toast-success appeared to confirm to the user which item had been added, quantity, current bag cost and option to checkout. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. This worked as planned.
 
