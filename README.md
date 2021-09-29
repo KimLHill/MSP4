@@ -59,7 +59,14 @@ Having created the user stories so that I knew who I was designing my website fo
     
     This gave me the following ideas:
     * Create an online shop with the products sold by Afan Forest Adventures.
-    * Create a blog 
+    * Create a blog to further promote the products sold by Afan Forest Adventures; to increase the interest for users and to give the users a reason to keep re-visiting the website to increase the chances of them making purchases and repeat purchases.
+    * Create a gallery to promote the Afan Forest and the products sold by Afan Forest Adventures, again with the purpose of giving something extra to website users and promoting more of the products to increase the chances of the users making a purchase.
+    * To provide an easy way of searching for the product the user is after.
+    * To provide a simple checkout process to increase the chance of the user completing the purchase and not just adding it to their bag.
+    * To provide contact details for Afan Forest Adventures such as phone and email, but also social media links to appeal to the wide age range of users and user contact preferences.
+    * To provide a clean website layout that appeals to the wide range of users but targeting the outdoor/active key user groups identified above.
+    * To provide a consistent website layout and experience across the site to keep familiarity and be suitable for use by people of all computer competency levels.
+    * To provide a user account area to store past order history and profile information such as shipping/billing address.
 
 2.	**Scope Plane:**
     * When addressing the scope plane, I focused on what features were to be included on the website and its key functionality to meet the all the user’s needs. I also needed to combine these with Stripe and Django as per the requirements for my Code Institute MSP4. I kept in mind the question of: Why would a user want this?
@@ -91,6 +98,44 @@ Having created the user stories so that I knew who I was designing my website fo
                 * Allow superuser to delete a product
                 * Allow superuser to delete a blog post
                 * Allow superuser to delete a gallery image
+
+3. **Structure Plane:**
+    * When addressing the structure plane, I focused on the journey the website would take the users on. I kept in mind the question: What is an intuitive way to navigate through the content and features?
+        * How to get there? I knew that my website should include a main navbar with tabs to enable users to easily navigate through the website content and a sub-navbar to easily navigate through the product categories. 
+        * There would also be a products/blogs/gallery page to display a limited amount of information on the products/blogs/images but that links to a page with greater information detail if the user clicks on them. This allows the user to easily access more detail on the items they want to know more about, without being overloaded with information at first or having to search through lots of information to find what they want. 
+        * I wanted some of the website like the home, products, gallery and blog pages to be open to all users, but for some pages like order history or the ability to manage products to only be displayed to the alloed users. I decided to have different tabs displaying, depending on whether or not a user was logged in. For example, a user who is already logged in doesn’t want to see ‘Register’ or ‘Login’ options, so instead can see 'My profile' and ‘Logout’ or 'Product Management' for superusers.
+        * How will they move through the website?
+            * Guest (not logged in). This user firstly views the home page, they can see the main navbar with a search bar to quickly find products and with links to the create an account, view their shopping bag, view blogs, view the gallery. The secondary navbar displays the product categories for ease of searching for products and showing the range of categories avaiable in the shop.
+            * Customer and Superuser (logged in) This user can see the same as the guest, however the dropdown menu options provide different options for them. This provides the same flow through the website which is:
+                * home page with contact details
+                * search bar to quickly and easily find products to increase sales which is the main purpose of the website
+                * access their account and view their shopping bag which are what the suer will be wanting and expecting to see
+                * view blogs and gallery to further promote th products and to provide inspiration if the user is not sure what they want to purchase or to persuade them to purchase more.
+                * The secondary navbar provides another prompt to search through the products.
+
+4. **Skeleton Plane:**
+    * When addressing the skeleton plane, I focused on keeping the layout design of the website familiar to the users by using a standard layout the users would be use to seeing. I kept in mind the question: What conventions will the user be familiar with? This led to the choices of:
+        * a navbar at the top of the page
+        * a main body
+        * a footer at the bottom of the page
+    * How to style the page? I knew that my website pages should be consistent in style and that they should use a standard page layout. I chose to use features the user would expect to see including:
+        * logo linked to home page
+        * social media links open new window to the relevant page
+        * email icon opens new window to email provider
+        * navbar dropdowns
+        * navbar toggle on smaller screen sizes
+        * contact details, social media details and copyright info in the footer
+
+5. **Surface Plane:**
+    * When addressing the surface plane, I focused on the website branding and details like the colour, fonts and images. I kept in mind the question: What will be appeal to my users?
+        * Images – promoting the forest, being outdoors, outdoor activities and camping activities to appeal to the website’s users.
+        * Colour scheme – I chose to use the colours of green, black and white as these are gender neutral colours that will appeal to people of all ages. Green is also associated with the outdoors so fits well with the business and will appeal to the website's users. They are also strong colours that will stand out from the potentially large number of colours in product, blog and gallery photos.
+        * Icons – I chose to use font awesome icons across the pages where it could aid the user’s understanding and for greater visual appeal.
+        * Logo – I chose to position the logo in the top left-hand corner of the website (within the navbar) as this is a convention of websites that users have to come to expect.
+        * Call to action buttons - I chose to colour the call-to-action buttons in bright colours to attract the user and make them more likely to click them.
+        * Fonts - I kep the fonts as common fonts that are clean and easy to read.
+
+
 
 
 ### **Technologies Used**
