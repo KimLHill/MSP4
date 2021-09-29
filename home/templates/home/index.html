@@ -24,4 +24,35 @@
             </div>
         </div>
     </div>
+    <div class="index-container">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="index-font" style="color: #fff;">Welcome!</h2>
+            <hr class="w-50 mb-1" style="color: #fff;">
+                <p style="color: #fff;">
+                    The Afan Forest is the perfect place to stay, be outdoors, 
+                    enjoy adventurous activities or unwind in a peaceful setting. 
+                    At Afan Forest Adventures we will have the perfect option for you.
+                </p>
+                <p style="color: #fff;">
+                    Find your stay, activity or course here
+                </p>
+                <a href="{% url 'products' %}" class="book-now-button btn btn-large 
+                    rounded-0 py-3">Products</a>
+                <br>
+                <p style="color: #fff;">
+                    Find inspiration here
+                </p>
+                <a href="{% url 'blog' %}" class="book-now-button btn btn-large 
+                    rounded-0 py-3">Blog</a>
+                <br>
+                <p style="color: #fff;">
+                    Check out photos here
+                </p>
+                <a href="{% url 'gallery' %}" class="book-now-button btn btn-large 
+                    rounded-0 py-3">Gallery</a>
+                <br><br>
+        </div>
+    </div>
+    </div>
 {% endblock %}

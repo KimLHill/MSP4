@@ -28,6 +28,10 @@ body {
     text-transform: uppercase;
 }
 
+.index-font {
+    text-transform: uppercase;
+}
+
 .main-logo-link {
     width: fit-content;
 }
