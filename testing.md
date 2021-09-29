@@ -15,9 +15,16 @@
 * I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.
 * I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.
 
-## **Problems Resolved During Testing**
+## **Manual Testing of features**
+### **Testing toast-success**
+* I added an item to my basket to ensure the toast-success appeared to confirm to the user which item had been added, quantity, current bag cost and option to checkout. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. This worked as planned.
+
+![prompt-to-spend-more](https://user-images.githubusercontent.com/74603013/135245904-93f81cde-c8c6-466b-a272-5aa54c2b9224.png)
+
+
+## **Problems Resolved During Manual Testing**
 * Having run the “loaddata” commands and “runserver”, the image for “emergency outdoor first aid” and “bike maintenance” weren’t showing on the website. I found that both of these errors were due to having accidentally used different names in the products.json file and the corresponding image in the media file. I found that I had put “first-aid.jpg” and “mtb-maintenance.jpg” as my images in products.json but had called them “first_aid.jpg” and “bike-maintenance.jpg” in the media file. I changed the names to match and re-ran the “loaddata products” command to fix these errors.
-* The pricing for the products and shopping bag was displaying in USD currency. This was because I had followed the Code Institute Boutique Ado tutorial to write my code and they had used $ currency. However, as my project was aimed at British users, I changed the currency to display in GBP £. 
+* The pricing for the products and shopping bag was displaying in USD currency. This was because I had followed the Code Institute Boutique Ado tutorial to write my code and they had used $ currency. However, as my project was aimed at British users, I changed the currency to display in GBP £. I later foubnd the same error in my toast_success message when a user added something to their basket that was under a grand total of £50, as a prompt to get them to spend more. I updated the toast text to correct this.
 * The blog page title on the Blogs page read ‘Products’ instead of ‘Blogs’ from where I had copied the products template to create the blog.html template. I fixed this by correcting the h2 title in blog.html.
 * On clicking the gallery navbar icon, the gallery page failed to load giving the following error:
 ![gallery-error-message](https://user-images.githubusercontent.com/74603013/135091799-bebfa10b-23a1-467d-ab8e-cdeba0bbc6fe.png)
@@ -44,6 +51,7 @@ This time the error was having changed the 'edit' and 'delete' instead of the 'b
 This fixed the error and the Gallery page displayed correctly.
 * The 'Book your adventure here' button on the home page didn't work. I found that I had not attached a url to this button. I added the all products page url and this fixed the problem.
 * When I added a footer to the website, it had a very large top padding. I found the problem to be that I had used the same class name in my footer as for my block content which had a top-padding of 200px. I resolved this error by changing the class name of the footer to apply different css styling and reduce the footer height for a better appearance. I also added the mt-auto Bootstrap flexbox class to fix the footer to the bottom of the page.
+* The website was designed with a free next-day delivery bonus if the user spent £50 and added a percentage delivery charge if the grand total of the shopping bag was under this value. I kept this functionality in place as detailed in my README under 'Additional Features Implemented' but set the delivery cost 0 and updated both the toast-success message and shopping bag message to the new free coffee offer and redeem instructions.
 
 ## **Problems Resolved During Deployment**
 * A major problem I encountered was with deploying to Heroku. I could run the project locally through Gitpod and that worked fine but I was getting build error when trying to deploy to Heroku so my project wouldn't build and wouldn't deploy. I spent a day trying to resolve my error by rechecking procfile, Afan settings, checking views, models and config variables. I then saught help from the Code Institute Tutor Support Team. The build log detailed the error.

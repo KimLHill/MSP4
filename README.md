@@ -136,12 +136,25 @@ Having created the user stories so that I knew who I was designing my website fo
         * Fonts - I kep the fonts as common fonts that are clean and easy to read.
 
 
+### **Additional Features Implemented**
+* I liked the idea of having the prompt to encourage users to spend more as this fits with the purpose of the website. The website was designed with a free next-day delivery bonus if the user spent £50 and added a percentage delivery charge if the grand total of the shopping bag was under this value. However, as the products sold by Afan Forest Adventures would not be shipped, no delivery charge was required at the moment. However this functionality may be required in the future for example if they decide to sell clothing or other phycial merchandise that needs to be shipped to the customer. So I set the free delivery cutoff to 0 so no charge was incurred, but so that the functionality remained in place to be easily added in the future. I Then added the incentive of a free coffee to be redeemed in the shop onsite, so nothing physical needed to be sent to the user, but provided a nice bonus to user's to spend more money! This prompt was in the toast-success when a user added an item to their basket that was under £50, with a further prompt in the shopping bag totals to further promote spending more money on the site!
+* Added delay to order creation if not found in database to ensure an order isn’t added twice if the view is just slow. Done in webhook_handler.
+* Added a stripe_pid field as a required field to order, to ensure each order is assigned a unique number and therefore prevents a second-order not being placed if a user orders the same items on two separate occasions, as the first order will have the different  stripe_pid to ensure the second order will be added to the database.
+* Provided visual feedback in forms – text form inputs are greyed out when empty and the text changes to black as the input field is completed. Placeholders are used to prompt the user to submit the correct information for that form field. Furthermore, an asterix provides a visual indication that the form is a required field as a convention the user will be use to.
+* Added a country dropdown menu to aid the user in selecting the correct two-digit code used by Stripe to identify each country.
+* Footer icons turn bold when user hovers over them to help prompt user to click them and show which they are selecting.
+* When hovering over links (e.g. navbar and buttons) the mouse cursor changes from an arrow to a pointed finger cursor to provide a visual indication to the user that they can click on this item and to encourage them to click it.
+#### **Javascript Features**
+* Back to top arrows provide a simple way to return user to top of page, whilst this isn’t needed at the moment it would be useful in the future as more content is added to the website.
+* To get the current year in the copyright information in the footer of the page.
+* Toasts to provide helpful messages to the suer to confirm their actions have been either successfully completed or as an error message to alert the user to a problem.
+* For the quantity change buttons to allow the user to simply click up or down buttons to change the quantity without needing to type in a number.
 
 
 ### **Technologies Used**
 * HTML5 used for the .html pages
 * CSS used to style the html pages.
-* Javascript used to make my website interactive with the carousel and collapsible accordian.
+* Javascript used to make my website interactive.
 * [jQuery](https://api.jquery.com/) javascript library used for my javascript code denoted by $ prefix on script.js.
 * [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) to produce the secure passwords used in my project.
 * [AWS Amazon Web Services](https://aws.amazon.com/) cloud-based storage service to store my static and media files.
