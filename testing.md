@@ -1,33 +1,130 @@
+# **Testing**
 
-#### Potential user's perspective ####
-* I am a potential customer, I want to know what activities are offered, so I can decide if I want to buy any.
+## **User Stories**
+
+### **Potential user's perspective**
+* **I am a potential customer, I want to know what activities are offered, so I can decide if I want to buy any.**
     * From the home page click the 'Book your adventure now' button or the 'products' button to be taken to the all products page.
     * From the search bar by typing for the activity they want to know whther it is offered.
     * From the 'activities' tap in the secondary navbar and selecting one of the dropdown menu options to explore the activity options.
-* I am a customer who will be visiting Afan Forest Adventures, I want to know what facilities are available, so I can plan my day/stay.
+* **I am a customer who will be visiting Afan Forest Adventures, I want to know what facilities are available, so I can plan my day/stay.**
     * From the secondary navbar this user can see that Afan Forest Adventures offers a campsite and from the dropdown can see the other ioptions for caravan, glamping etc. They can also see the activities and courses to see the range of offerings.
     * This user could also check out the gallery from the 'gallery' button on the homepage or 'gallery' in navbar.
     * This user could also check out the social media or contact the centre via the details in the footer.
-* I am a MTB instructor, I want to know what courses Afan Forest Adventures offer, so I can improve my qualifications.
+* **I am a MTB instructor, I want to know what courses Afan Forest Adventures offer, so I can improve my qualifications.**
     * From the search bar by typing in the name of the course they are interested in doing.
     * From the 'courses' tab on the navbar and selecting one of the categories depending on the qualification type or skills course they are after.
-* I am visitor to Afan Forest Adventures, I want to know their contact details, so that I can ask them my questions.
+* **I am visitor to Afan Forest Adventures, I want to know their contact details, so that I can ask them my questions.**
     * From the 'Contact Us' section in the footer with options to contact via phone, email (linked to an email platform when clicked), or the social media channels of twitter, facebook and instagram (linked to an corresponding platform when clicked).
 
-#### User's perspective ####
-* I am a customer who has booked an activity, I want to view my order history, so I can see what I have booked.
+### **User's perspective**
+* **I am a customer who has booked an activity, I want to view my order history, so I can see what I have booked.**
     * This option is reserved for customers with an account: From the navbar select 'My Account', login to the account to see their order history.
     * Guest users wihtout an account are provided with an order confirmation and email confirmation with their order details.
-* I am a customer, I want a quick and simple way of making my purchase.
+* **I am a customer, I want a quick and simple way of making my purchase.**
     * From the product details page; add item to bag which causes a toast-success messsage to appear with a link to 'go to secure checkout' taking them to their shopping bag or by clicking the shopping bag navbar tab; checking bag contents and clicking 'secure checkout' button; completing the form and finally clicking 'confirm order'. 
-* I am a customer who is booking a course that is paid by my employer, I want a copy of my order, so I can reclaim the cost of the course.
+* **I am a customer who is booking a course that is paid by my employer, I want a copy of my order, so I can reclaim the cost of the course.**
     * This option is reserved for customers with an account: From the navbar select 'My Account', login to the account to see their order history.
     * Guest users without an account are provided with an order confirmation and email confirmation with their order details.
 
-#### Site owner's perspective ####
-* I am the admin for Afan Forest Adventures, I want a simple method of managing products, so I can upload, edit and delete what we offer.
-* I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.
-* I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.
+### **Site owner's perspective**
+* **I am the admin for Afan Forest Adventures, I want a simple method of managing products, so I can upload, edit and delete what we offer.**
+* **I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.**
+* **I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.**
+
+
+## **HTML Validation**
+I passed all my html code through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) and also used the 'Problems' feature in the Gitpod terminal to identify any problems in my code.
+
+**Note: Following errors ignored in W3CValidation testing (ignored in my error reporting below):**
+* On most .html pages I had validation errors of: "Bad value" relating to my use of {{ url_for}} internal links for Python. These errors were to be expected as the html validator was not expecting to find these in html code. I therefore left the code the same and these errors still exist.
+* I also had errors of: "Text not allowed in element ul in this context." This error related to the use of Jinja templating and is needed to determine which navbar tabs are displayed according to whether or not the user is logged into their account. This same error also relates to the use of Jinja for the url links in buttons which is required. I therefore chose to keep the code the same and these errors still exist. 
+* On all .html pages except for the base.html page I had errors relating to the lack of declaring the lang, doctype and header elements. This is because these pages were extending from the base.html template. I therefore chose not to change my code and these errors still exist, but are to be expected.
+* A "Warning: The type attribute is unnecessary for JavaScript resources" on all pages with a back to top arrow button. This related to the javascript code for the functionality of the back to top arrow button. As this was code I had created whilst following the Code Institute tutorial and because it was a warning not an error, I left this code unchanged and this warning is still present.  
+  
+### **Bag app**
+1. #### **bag.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** 4 x flake8 errors for "line too long". I chose to ignore these erros because they relate to the AUTH_PASSWORD_VALIDATORS.
+
+### **Blog app**
+1. ### **add_blog.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+2. ### **blog_detail.html** 
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+3. ### **blog_detail.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+4. ### **blog.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+5. ### **edit_blog.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+### **Checkout app**
+1. ### **checkout_success.html**
+    * **W3C Validation:** "Error: Stray end tag div." This was caused by an additional div tag at the end of my code. I removed this unnecessary element and my code passed through the validator.
+    * **Terminal 'Problems':** No errors found.
+
+2. ### **checkout.html** 
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+### **Gallery app**
+1. ### **add_gallery.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+2. ### **edit_gallery.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+3. ### **gallery_detail.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+4. ### **gallery.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+### **Home app**
+1. ### **index.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+### **Products app**
+1. ### **add_product.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+2. ### **edit_product.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+3. ### **product_detail.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
+
+4. ### **products.html**
+    * **W3C Validation:** Errors relating to the product sort selector code. As this was code that I had created by following the Code Institute Boutique Ado tutorial, I left this code unchanged. The errors related to the use of '==', 'not serializable as XML 1.0.' and 'none_none'.
+    * **Terminal 'Problems':** No errors found.
+
+### **Profiles app**
+1. ### **add_product.html**
+    * **W3C Validation:** Error relating to the use of tr tags used to create the rows in the form. I chose to ignore this error as it was used for the table formatting and I checked against the Code Institute tutorial example code which matched mine. 
+    * **Terminal 'Problems':** No errors found.
+
+### **Templates app**
+1. ### **base.html**
+    * **W3C Validation:** No errors found.  
+    * **Terminal 'Problems':** No errors found.
 
 ## **Manual Testing of features**
 The following manual tests were carried out on Microsoft Edge, Google Chrome and Mozilla Firefox:
@@ -88,8 +185,8 @@ This fixed the error and the Gallery page displayed correctly.
     * Reduce padding on product, blog, gallery detail buttons.
     * Reduce size and padding of shopping bag buttons.
     * Set qty increment to ignore media query changes.
-
 * I changed the col-width and css styling for the main callout and 'book your adventure here' button as having the two alongside each other looked bad on smaller screens. I also changed the overlay so that it was just behind the main 'The outdoors awaits...' text and not behind the whole div with button so that it looked smarter and cleaner on the screen. I left the large overlay on the second callout as I didn't think this looked odd. In changing the col widths the callout was much more responsive for mobile devices.
+
 
 ## **Problems Resolved During Deployment**
 * A major problem I encountered was with deploying to Heroku. I could run the project locally through Gitpod and that worked fine but I was getting build error when trying to deploy to Heroku so my project wouldn't build and wouldn't deploy. I spent a day trying to resolve my error by rechecking procfile, Afan settings, checking views, models and config variables. I then saught help from the Code Institute Tutor Support Team. The build log detailed the error.
@@ -104,5 +201,5 @@ but the gallery and blog pages were fine in the localhost run from Gitpod:
 
 ![gitpod-blogs-success](https://user-images.githubusercontent.com/74603013/135150841-0c5980ac-f4ff-4e17-b132-4b39cacc49fb.png)
 
-
+As the project wored locally, this helped me to identify the source of the problem. I had forgotten to do the make migrations to Heroku Postgress. I made these migrations and the loaddata commands for the categories, products, blog and fixtures and the deployed app worked correctly.
 

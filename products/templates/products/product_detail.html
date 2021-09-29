@@ -20,11 +20,13 @@
                     {% if product.image %}
                         <!-- Open image in new window -->
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" 
+                                src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            <img class="card-img-top img-fluid" 
+                                src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -35,7 +37,9 @@
                     <!-- Get product name -->
                     <p class="mb-0">{{ product.name }}</p>
                     <!-- Get product price -->
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">
+                        £{{ product.price }}
+                    </p>
                     <!-- Product category -->
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
@@ -54,7 +58,9 @@
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">
+                            Delete
+                        </a>
                     </small>
                     {% endif %}
                     <!-- Get product description -->

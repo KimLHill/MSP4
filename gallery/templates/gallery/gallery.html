@@ -31,12 +31,14 @@
                                 <!-- Image card -->
                                 <!-- Link gallery image to gallery details page -->
                                 <a href="{% url 'gallery_detail' gallery.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ gallery.image.url }}" alt="{{ gallery.name }}">
+                                    <img class="card-img-top img-fluid" 
+                                        src="{{ gallery.image.url }}" alt="{{ gallery.name }}">
                                 </a>
                                 {% else %}
                                 <!-- Link to gallery details page even if no image -->
                                 <a href="{% url 'gallery_detail' gallery.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ gallery.name }}">
+                                    <img class="card-img-top img-fluid" 
+                                        src="{{ MEDIA_URL }}noimage.png" alt="{{ gallery.name }}">
                                 </a>
                                 {% endif %}
                                 <!-- Gallery name -->
@@ -48,12 +50,16 @@
                                     <div class="row">
                                         <div class="col">
                                             <!-- Author -->
-                                            <p class="lead mb-0 text-left font-weight-bold">{{ gallery.author }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold">
+                                                {{ gallery.author }}
+                                            </p>
                                             <!-- If superuser, show edit and delete options buttons -->
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_gallery' gallery.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_gallery' gallery.id %}">Delete</a>
+                                                    <a class="text-danger" href="{% url 'delete_gallery' gallery.id %}">
+                                                        Delete
+                                                    </a>
                                                 </small>
                                             {% endif %}
                                         </div>

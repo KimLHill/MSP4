@@ -102,13 +102,18 @@
                             <!-- Give user option to save their details -->
 							{% if user.is_authenticated %}
                             <!-- If logged in, save delivery info to their profile to prefill form next time-->
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+								<label class="form-check-label" for="id-save-info">
+                                    Save this delivery information to my profile
+                                </label>
+                                <input class="form-check-input ml-2 mr-0" type="checkbox" 
+                                    id="id-save-info" name="save-info" checked>
 							{% else %}
                             <!-- If not logged in, option to create account or login -->
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-info" href="{% url 'account_signup' %}">
+                                        Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_login' %}">
+                                        login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
@@ -147,14 +152,17 @@
                                 <!-- Icon from Font Awesome -->
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
+							<span>
+                                Your card will be charged <strong>
+                                £{{ grand_total|floatformat:2 }}</strong>
+                            </span>
 						</p>
 					</div>
                 </form>
             </div>
         </div>
     </div>
-    <!-- Spinning overlay to show visual feedback to user that form is submitting -->
+    <!-- Spinning overlay to show visual feedback that form is submitting -->
     <div id="loading-overlay">
         <h1 class="text-light logo-font loading-spinner">
             <span class="icon">

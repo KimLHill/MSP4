@@ -21,18 +21,22 @@
                 <hr>
             </div>
         </div>
-
         <div class="row">
             <div class="col-12 col-md-6">
                 <!-- Form -->
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_product' product.id %}" 
+                    class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
                         <!-- Cancel button which returns user to products page -->
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">
+                            Cancel
+                        </a>
                         <!-- Submit button -->
-                        <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                        <button class="btn btn-black rounded-0" type="submit">
+                            Update Product
+                        </button>
                     </div>
                 </form>
             </div>            

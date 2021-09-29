@@ -20,11 +20,13 @@
                     {% if gallery.image %}
                         <!-- Open image in new window -->
                         <a href="{{ gallery.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ gallery.image.url }}" alt="{{ gallery.name }}">
+                            <img class="card-img-top img-fluid" 
+                                src="{{ gallery.image.url }}" alt="{{ gallery.name }}">
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ gallery.name }}">
+                            <img class="card-img-top img-fluid" 
+                                src="{{ MEDIA_URL }}noimage.png" alt="{{ gallery.name }}">
                         </a>
                     {% endif %}
                 </div>
@@ -40,7 +42,9 @@
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_gallery' gallery.id %}">Edit</a> | 
-                        <a class="text-danger" href="{% url 'delete_gallery' gallery.id %}">Delete</a>
+                        <a class="text-danger" href="{% url 'delete_gallery' gallery.id %}">
+                            Delete
+                        </a>
                     </small>
                     {% endif %}
                     <!-- Get image description -->
