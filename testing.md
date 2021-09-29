@@ -16,6 +16,13 @@
 * I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.
 
 ## **Manual Testing of features**
+The following manual tests were carried out on Microsoft Edge, Google Chrome and Mozilla Firefox:
+* Social media links were hovered over to makesure they changed to their hover feature of bold to make them look bigger and then clicked on to make sure that they open in a new tab at the correct corresponding landing page.
+* Navbar items were clicked on from each page to make sure that they navigate to the correct page.
+* All buttons and links were clicked on to check that they take the user to the correct page.
+* Clicking on the Afan Forest Adventures logo in the navbar returns the user back to the home page.
+* Checked the mouse cursor changed from an arrow to a pointed finger when the user could click/swipe on an item they could select like navbar buttons, products items, blog items and gallery items etc.
+
 ### **Testing toast-success**
 * I added an item to my basket to ensure the toast-success appeared to confirm to the user which item had been added, quantity, current bag cost and option to checkout. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. This worked as planned.
 

@@ -135,6 +135,10 @@ Having created the user stories so that I knew who I was designing my website fo
         * Call to action buttons - I chose to colour the call-to-action buttons in bright colours to attract the user and make them more likely to click them.
         * Fonts - I kep the fonts as common fonts that are clean and easy to read.
 
+### **Features**
+Features consistent across all the different pages of my project include:
+1. **Navbar**
+    * The navbar has the Afan Forest Adventures logo which, when clicked, returns the user to the home page. In the centre is a search bar with a visual search icon and 'search' placeholder text to make it really obvious what this feature is for. On the right-hand side are the navigation tabs linking to account, shopping bag, blog and gallery. These have visual icons relating to the tab to aid the user's understanding and for better visual appeal. The black (#000) fits with the colour scheme and provides a good contrast from the white background. A text-shadow effect, further enhances readability. When the user hovers over a navbar tab, the background colour of the tab changes to provide visual feedback as to which tab they are about to click. The navbar collapses to a toggle button on tablet and mobile devices for an improved user experience on smaller screen sizes. The navbar tabs have dropdown menus to further aid the user in navigating the website, these change depending on whether or not the user is logged in, to provide a better user experience by showing them only what they need.
 
 ### **Additional Features Implemented**
 * I liked the idea of having the prompt to encourage users to spend more as this fits with the purpose of the website. The website was designed with a free next-day delivery bonus if the user spent £50 and added a percentage delivery charge if the grand total of the shopping bag was under this value. However, as the products sold by Afan Forest Adventures would not be shipped, no delivery charge was required at the moment. However this functionality may be required in the future for example if they decide to sell clothing or other phycial merchandise that needs to be shipped to the customer. So I set the free delivery cutoff to 0 so no charge was incurred, but so that the functionality remained in place to be easily added in the future. I Then added the incentive of a free coffee to be redeemed in the shop onsite, so nothing physical needed to be sent to the user, but provided a nice bonus to user's to spend more money! This prompt was in the toast-success when a user added an item to their basket that was under £50, with a further prompt in the shopping bag totals to further promote spending more money on the site!
@@ -241,7 +245,7 @@ Follow these steps to deploy locally:
 
 ### **Media**
 The images used on my wireframes and website are from:
-* [home hero image](https://images.pexels.com/photos/397096/pexels-photo-397096.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)
+* [home hero image](https://images.pexels.com/photos/117843/pexels-photo-117843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [camping image](https://images.pexels.com/photos/6324131/pexels-photo-6324131.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)
 * [glamping image](https://images.pexels.com/photos/5359324/pexels-photo-5359324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [caravan image](https://images.unsplash.com/photo-1626680114529-3f6ffa002b80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80)
