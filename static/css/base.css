@@ -12,15 +12,13 @@ body {
     font-family: 'Lato';
 }
 
+/* Padding to position first callout container on index page */ 
 .container {
     padding-top: 200px;
 }
 
-/* First allout container overlay on home page behind main header */
+/* First callout container overlay on home page behind main header */
 .call-out-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -50,7 +48,7 @@ body {
 
 /* Font styling for main header on home page */
 .callout-font{
-    font-size: 50px !important;
+    font-size: 50px;
     text-transform: uppercase;
     color: white; 
 }
@@ -60,11 +58,12 @@ body {
     text-transform: uppercase;
 }
 
+/* Styling to position logo link */
 .main-logo-link {
     width: fit-content;
 }
 
-/* styling for book your adventure button on home page */
+/* Styling for book your adventure button on home page */
 .book-now-button {
     background: #274E13;
     color: white;
@@ -77,20 +76,21 @@ body {
     color: white;
 }
 
-/* styling for checkout button in shopping bag */
+/* Styling for checkout button in shopping bag */
 .btn-checkout {
     background: #274E13;
     color: white;
     min-width: 260px;
 }
 
-/* quantity box outline on product pages */
+/* Quantity box outline on product pages */
 .btn-outline-black {
     background: white;
     color: black !important; 
     border: 1px solid black;
 }
 
+/* Colour changes for buttons when hovered over */
 .book-now-button:hover,
 .book-now-button:active,
 .book-now-button:focus,
@@ -101,10 +101,12 @@ body {
     color: white;
 }
 
+/* Black styling for text across multiple pages */
 .text-black {
     color: #000 !important;
 }
 
+/* Black border on form fields */
 .border-black {
     border: 1px solid black !important;
 }
@@ -114,7 +116,7 @@ body {
     background-color: lightgreen;
 }
 
-/* White background on product pages */
+/* White background on product, blog and gallery pages */
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -137,7 +139,7 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
-/* Positioning of back to top icon button */
+/* Styling and positioning of back to top icon button */
 .btt-button {
     background-color: #93c47d;
     height: 42px;
@@ -155,24 +157,32 @@ a.category-badge > span.badge:hover {
 }
 
 /* ---------------------------------- Footer */
-
+/* Footer background styling */
 footer {
     background-color: #000;
     margin-top: 30px;
 }
+
+/* Footer headers styling*/
 .footer-title {
     color: #28a745;
     font-size: 2rem;
     padding-top: 10px;
 }
+
+/* Footer text styling*/
 .footer-text {
     color: #fff;
     font-size: 1.1rem;
 }
+
+/* Footer social media icons styling*/
 .footer-icons>.row>.col-4>a>i,
 .footer-text a {
     transition: all 0.5s ease 0s;
 }
+
+/* Footer social media icons hover styling*/
 .footer-icons>.row>.col-4>a>i:hover,
 .footer-icons>.row>.col-4>a>i:focus,
 .footer-text a:hover,
@@ -196,7 +206,7 @@ footer {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/* Code from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -241,6 +251,7 @@ footer {
     border-bottom-color: #343a40 !important;
 }
 
+/* Styling for bag in toast-success */
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -281,4 +292,44 @@ footer {
     body {
         height: calc(100vh - 116px);
     }
+
+    /* Reduce size of main callout */
+    .display-6.callout-font.text-white {
+        font-size: 2rem;
+    }
+
+    /* Reduce padding of nav links */
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    /* Reduce size of navbar font awesome icons */
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    /* Reduce size and padding of toggler */
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    /* Reduce padding on product, blog, gallery detail buttons */
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    /* Reduce size and padding of shopping bag buttons */
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    /* Set qty increment to ignore media query changes */
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+
 }

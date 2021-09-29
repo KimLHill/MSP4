@@ -22,14 +22,15 @@ def bag_contents(request):
             'quantity': quantity,
             'product': product,
         })
-
+    # Add delivery charge if total less than threshold
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = 0
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
+        # Free delivery if total more than threshold
         delivery = 0
         free_delivery_delta = 0
-    
+    # Calculate bag total
     grand_total = delivery + total
     
     context = {

@@ -1,7 +1,7 @@
 from django import forms
 from .models import Order
 
-
+# Checkout form fields
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order

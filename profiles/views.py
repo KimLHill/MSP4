@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 
-
+# Login required to display user profile
 @login_required
 def profile(request):
     """ Display the user's profile. """
@@ -33,7 +33,7 @@ def profile(request):
 
     return render(request, template, context)
 
-
+# View for order history
 def order_history(request, order_number):
     # Get the order
     order = get_object_or_404(Order, order_number=order_number)

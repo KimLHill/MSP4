@@ -31,6 +31,7 @@ def blog_detail(request, blog_id):
     return render(request, 'blog/blog_detail.html', context)
 
 
+# Require user to be logged in to add a blog
 @login_required
 def add_blog(request):
     # Add a blog to the site 
@@ -61,7 +62,7 @@ def add_blog(request):
 
     return render(request, template, context)
 
-
+# Require user to be logged in to edit a blog
 @login_required
 def edit_blog(request, blog_id):
     """ Edit a blog in the store """
@@ -74,8 +75,11 @@ def edit_blog(request, blog_id):
     if request.method == 'POST':
         form = BlogForm(request.POST, request.FILES, instance=blog)
         if form.is_valid():
+            # If valid, save form
             form.save()
+            # Show success message
             messages.success(request, 'Successfully updated blog!')
+            # Take user to that blog's details page
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
             messages.error(request, 'Failed to update blog. Please ensure the form is valid.')
@@ -91,7 +95,7 @@ def edit_blog(request, blog_id):
 
     return render(request, template, context)
 
-
+# Require user to be logged in to delete a blog
 @login_required
 def delete_blog(request, blog_id):
     if not request.user.is_superuser:

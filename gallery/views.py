@@ -30,7 +30,7 @@ def gallery_detail(request, gallery_id):
 
     return render(request, 'gallery/gallery_detail.html', context)
 
-
+# Require user to be logged in to add to gallery
 @login_required
 def add_gallery(request):
     # Add a gallery to the site 
@@ -61,7 +61,7 @@ def add_gallery(request):
 
     return render(request, template, context)
 
-
+# Require user to be logged in to edit gallery
 @login_required
 def edit_gallery(request, gallery_id):
     """ Edit an image in the gallery """
@@ -91,7 +91,7 @@ def edit_gallery(request, gallery_id):
 
     return render(request, template, context)
 
-
+# Require user to be logged in to delete gallery image
 @login_required
 def delete_gallery(request, gallery_id):
     if not request.user.is_superuser:

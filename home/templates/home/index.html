@@ -12,21 +12,23 @@
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
-            <div class="call-out-main col-12 my-auto">
-                <h1 class="display-6 callout-font text-white">
+            <!-- Main callout message -->
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="call-out-main display-4 logo-font text-white">
                     The outdoors awaits...   
                 </h1>
                 <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="book-now-button btn btn-large rounded-0 py-3">Book your<br>adventure here</a>
-                    </h4>
+                    <!-- Button linked to all products page -->
+                    <a href="{% url 'products' %}" class="book-now-button btn btn-large rounded-0 py-3">Book your<br>adventure here</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="index-container">
     <div class="row">
+        <!-- Secondary callout -->
         <div class="call-out col text-center mt-3">
+            <!-- Page title -->
             <h2 class="index-font" style="color: #fff;">Welcome!</h2>
             <hr class="w-50 mb-1" style="color: #fff;">
                 <p style="color: #fff;">
@@ -34,18 +36,21 @@
                     enjoy adventurous activities or unwind in a peaceful setting. 
                     At Afan Forest Adventures we will have the perfect option for you.
                 </p>
+                <!-- Products para and button -->
                 <p style="color: #fff;">
                     Find your stay, activity or course here
                 </p>
                 <a href="{% url 'products' %}" class="book-now-button btn btn-large 
                     rounded-0 py-3">Products</a>
                 <br>
+                <!-- Blog para and button -->
                 <p style="color: #fff;">
                     Find inspiration here
                 </p>
                 <a href="{% url 'blog' %}" class="book-now-button btn btn-large 
                     rounded-0 py-3">Blog</a>
                 <br>
+                <!-- Gallery para and button -->
                 <p style="color: #fff;">
                     Check out photos here
                 </p>

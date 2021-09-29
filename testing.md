@@ -80,6 +80,16 @@ This fixed the error and the Gallery page displayed correctly.
 * The website was designed with a free next-day delivery bonus if the user spent £50 and added a percentage delivery charge if the grand total of the shopping bag was under this value. I kept this functionality in place as detailed in my README under 'Additional Features Implemented' but set the delivery cost 0 and updated both the toast-success message and shopping bag message to the new free coffee offer and redeem instructions.
 * Whilst not a true problem, I felt the home page image didn't conjure up the feel I waqnted the website to create as it showed a misty photo creating an almost sad feel. So I changed the hero image to fit better with the happy, adventurous image I wanted it to promote and that would better appeal to the website users. This did require, redownloading the media file from my GitHub repo and reuploading the images to the media file in the AWS S3 bucket.
 * When manually testing the footer icons, the email icon and email address were not clickable as I had intended. I found that I had failed to put the closing href anchor tage after the icon and paragraph containing the email address. Once I correctly positioned the closing tag, this email icon and email address worked as expected by opening the website for Microsoft Outlook email in a new tab.
+* On a mobile device som of the features weren't displaying nicely so I set media queries to overcome these issues. Using a screen size of 320px wide, I added media queries to sort the following problems:
+    * Reduce size of main callout. This initially didn't change anything as I had set the earlier css for this class as !important, so I removed that to allow the media query changes to take effect.
+    * Reduce padding of nav links.
+    * Reduce size of navbar font awesome icons.
+    * Reduce size and padding of toggler.
+    * Reduce padding on product, blog, gallery detail buttons.
+    * Reduce size and padding of shopping bag buttons.
+    * Set qty increment to ignore media query changes.
+
+* I changed the col-width and css styling for the main callout and 'book your adventure here' button as having the two alongside each other looked bad on smaller screens. I also changed the overlay so that it was just behind the main 'The outdoors awaits...' text and not behind the whole div with button so that it looked smarter and cleaner on the screen. I left the large overlay on the second callout as I didn't think this looked odd. In changing the col widths the callout was much more responsive for mobile devices.
 
 ## **Problems Resolved During Deployment**
 * A major problem I encountered was with deploying to Heroku. I could run the project locally through Gitpod and that worked fine but I was getting build error when trying to deploy to Heroku so my project wouldn't build and wouldn't deploy. I spent a day trying to resolve my error by rechecking procfile, Afan settings, checking views, models and config variables. I then saught help from the Code Institute Tutor Support Team. The build log detailed the error.

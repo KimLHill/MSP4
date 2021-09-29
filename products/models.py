@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Category model
 class Category(models.Model):
 
     class Meta:
@@ -17,7 +17,7 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
-
+# Product model
 class Product(models.Model):
     # requires each product to have a name, description and price
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)

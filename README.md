@@ -155,6 +155,10 @@ Features consistent across all the different pages of my project include:
 * To get the current year in the copyright information in the footer of the page.
 * Toasts to provide helpful messages to the suer to confirm their actions have been either successfully completed or as an error message to alert the user to a problem.
 * For the quantity change buttons to allow the user to simply click up or down buttons to change the quantity without needing to type in a number.
+* For the loading spinning cirle when submitting the checkout form to provide visual feedback to the user that the form is submitting before they reach the checkout success page, to prevent the user from trying to re-submit the form.
+* For the product search bar to enable users to quickly and easily search for the products they want.
+* For the product sort options to choose and display products in the order of the users preference e.g. price low to high.
+* To update or remove items from shopping bag to allow the user to easily adjust their order.
 
 
 ### **Technologies Used**

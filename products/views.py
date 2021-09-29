@@ -71,7 +71,7 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
-
+# Login required to add product
 @login_required
 def add_product(request):
     # Add a product to the store 
@@ -102,7 +102,7 @@ def add_product(request):
 
     return render(request, template, context)
 
-
+# Login required to edit product
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
@@ -132,7 +132,7 @@ def edit_product(request, product_id):
 
     return render(request, template, context)
 
-
+# Login required to delete product
 @login_required
 def delete_product(request, product_id):
     if not request.user.is_superuser:

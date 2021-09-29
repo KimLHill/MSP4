@@ -1,21 +1,26 @@
+/* Order history styling */
 .order-history {
     max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;
 }
 
+/* Profile form styling */
 #profile-update-form .form-control {
     color: #000;
 }
 
+/* Placeholder text styling */
 #profile-update-form input::placeholder {
     color: #aab7c4;
 }
 
+/* Change country text colour when country selected */
 #id_default_country,
 #id_default_country option:not(:first-child) {
     color: #000;
 }
 
+/* Set country text to placeholder colour if not selected */
 #id_default_country option:first-child {
     color: #aab7c4;
 }

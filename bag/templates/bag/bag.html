@@ -15,14 +15,15 @@
     <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row">
+            <!-- Page header with horizontal rule -->
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
-
         <div class="row">
+            <!-- If items in bag, display them -->
             <div class="col">
                 {% if bag_items %}
                     <div class="table-responsive rounded">
@@ -109,6 +110,7 @@
                                     <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
                                     <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
+                                    <!-- Prompt user to spend more -->
                                         <p class="mb-1 text-danger">
                                             You could get a free coffee by spending just <strong>£{{ free_delivery_delta }}</strong> more!
                                         </p>
@@ -139,7 +141,9 @@
                     </div>
                 </div>
                 {% else %}
+                    <!-- If no items in bag, display empty bag message -->
                     <p class="lead mb-5">Your bag is empty.</p>
+                    <!-- Keep shopping button -->
                     <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>

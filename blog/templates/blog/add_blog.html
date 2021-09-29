@@ -14,6 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
+                <!-- Page title and horizontal rule -->
                 <hr>
                 <h2 class="logo-font mb-4">Blog Management</h2>
                 <h5 class="text-muted">Add a Blog</h5>
@@ -23,11 +24,12 @@
 
         <div class="row">
             <div class="col-12 col-md-6">
+                <!-- Form -->
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-right">
-                        <!-- Cancel button which returns user to products page -->
+                        <!-- Cancel button which returns user to blogs page -->
                         <a class="btn btn-outline-black rounded-0" href="{% url 'blog' %}">Cancel</a>
                         <!-- Submit button -->
                         <button class="btn btn-black rounded-0" type="submit">Add Blog</button>

@@ -1,6 +1,6 @@
 from django.db import models
 
-# Blog model. Requires name, author and description. 
+# Gallery model. Requires name, author and description. 
 class Gallery(models.Model):
     name = models.CharField(max_length=254)
     author = models.CharField(max_length=254)

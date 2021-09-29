@@ -19,12 +19,13 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <!-- Page title with horizontal rule-->
                 <hr>
                 <h2 class="logo-font mb-4">Checkout</h2>
                 <hr>
             </div>
         </div>
-
+        <!-- Order summary of details -->
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="text-muted">Order Summary ({{ product_count }})</p>
@@ -76,7 +77,9 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
+                <!-- Prompt user to complate form -->
                 <p class="text-muted">Please fill out the form below to complete your order</p>
+                <!-- Form -->
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">

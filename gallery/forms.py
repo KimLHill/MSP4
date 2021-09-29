@@ -1,7 +1,7 @@
 from django import forms
 from .models import Gallery
 
-
+# Gallery form
 class GalleryForm(forms.ModelForm):
 
     class Meta:
