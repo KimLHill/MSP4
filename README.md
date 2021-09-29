@@ -148,6 +148,7 @@ Features consistent across all the different pages of my project include:
 * Added a country dropdown menu to aid the user in selecting the correct two-digit code used by Stripe to identify each country.
 * Footer icons turn bold when user hovers over them to help prompt user to click them and show which they are selecting.
 * When hovering over links (e.g. navbar and buttons) the mouse cursor changes from an arrow to a pointed finger cursor to provide a visual indication to the user that they can click on this item and to encourage them to click it.
+* Added overlays behind text on the home page to make this text easier to read and less distracting for th user, as it is positioned over the background image.
 #### **Javascript Features**
 * Back to top arrows provide a simple way to return user to top of page, whilst this isn’t needed at the moment it would be useful in the future as more content is added to the website.
 * To get the current year in the copyright information in the footer of the page.
