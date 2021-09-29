@@ -1,8 +1,9 @@
+/* HTML styling */
 html {
     height: 100%;
 }
 
-
+/* Main background image on home page */
 body {
     background: url('/media/home-image.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -15,7 +16,25 @@ body {
     padding-top: 200px;
 }
 
-/* from Bulma */
+/* First allout container overlay on home page behind main header */
+.call-out-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Second callout container overlay on home page behind body */
+.call-out{
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Code from Bulma to style font awesome icons */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -24,8 +43,16 @@ body {
     width: 1.5rem;
 }
 
+/* Logo styling */
 .logo-font {
     text-transform: uppercase;
+}
+
+
+.callout-font{
+    font-size: 50px !important;
+    text-transform: uppercase;
+    color: white; 
 }
 
 .index-font {

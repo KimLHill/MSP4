@@ -1,14 +1,28 @@
 
 #### Potential user's perspective ####
 * I am a potential customer, I want to know what activities are offered, so I can decide if I want to buy any.
+    * From the home page click the 'Book your adventure now' button or the 'products' button to be taken to the all products page.
+    * From the search bar by typing for the activity they want to know whther it is offered.
+    * From the 'activities' tap in the secondary navbar and selecting one of the dropdown menu options to explore the activity options.
 * I am a customer who will be visiting Afan Forest Adventures, I want to know what facilities are available, so I can plan my day/stay.
+    * From the secondary navbar this user can see that Afan Forest Adventures offers a campsite and from the dropdown can see the other ioptions for caravan, glamping etc. They can also see the activities and courses to see the range of offerings.
+    * This user could also check out the gallery from the 'gallery' button on the homepage or 'gallery' in navbar.
+    * This user could also check out the social media or contact the centre via the details in the footer.
 * I am a MTB instructor, I want to know what courses Afan Forest Adventures offer, so I can improve my qualifications.
+    * From the search bar by typing in the name of the course they are interested in doing.
+    * From the 'courses' tab on the navbar and selecting one of the categories depending on the qualification type or skills course they are after.
 * I am visitor to Afan Forest Adventures, I want to know their contact details, so that I can ask them my questions.
+    * From the 'Contact Us' section in the footer with options to contact via phone, email (linked to an email platform when clicked), or the social media channels of twitter, facebook and instagram (linked to an corresponding platform when clicked).
 
 #### User's perspective ####
 * I am a customer who has booked an activity, I want to view my order history, so I can see what I have booked.
+    * This option is reserved for customers with an account: From the navbar select 'My Account', login to the account to see their order history.
+    * Guest users wihtout an account are provided with an order confirmation and email confirmation with their order details.
 * I am a customer, I want a quick and simple way of making my purchase.
+    * From the product details page; add item to bag which causes a toast-success messsage to appear with a link to 'go to secure checkout' taking them to their shopping bag or by clicking the shopping bag navbar tab; checking bag contents and clicking 'secure checkout' button; completing the form and finally clicking 'confirm order'. 
 * I am a customer who is booking a course that is paid by my employer, I want a copy of my order, so I can reclaim the cost of the course.
+    * This option is reserved for customers with an account: From the navbar select 'My Account', login to the account to see their order history.
+    * Guest users without an account are provided with an order confirmation and email confirmation with their order details.
 
 #### Site owner's perspective ####
 * I am the admin for Afan Forest Adventures, I want a simple method of managing products, so I can upload, edit and delete what we offer.
@@ -59,6 +73,7 @@ This fixed the error and the Gallery page displayed correctly.
 * The 'Book your adventure here' button on the home page didn't work. I found that I had not attached a url to this button. I added the all products page url and this fixed the problem.
 * When I added a footer to the website, it had a very large top padding. I found the problem to be that I had used the same class name in my footer as for my block content which had a top-padding of 200px. I resolved this error by changing the class name of the footer to apply different css styling and reduce the footer height for a better appearance. I also added the mt-auto Bootstrap flexbox class to fix the footer to the bottom of the page.
 * The website was designed with a free next-day delivery bonus if the user spent £50 and added a percentage delivery charge if the grand total of the shopping bag was under this value. I kept this functionality in place as detailed in my README under 'Additional Features Implemented' but set the delivery cost 0 and updated both the toast-success message and shopping bag message to the new free coffee offer and redeem instructions.
+* Whilst not a true problem, I felt the home page image didn't conjure up the feel I waqnted the website to create as it showed a misty photo creating an almost sad feel. So I changed the hero image to fit better with the happy, adventurous image I wanted it to promote and that would better appeal to the website users. This did require, redownloading the media file from my GitHub repo and reuploading the images to the media file in the AWS S3 bucket.
 
 ## **Problems Resolved During Deployment**
 * A major problem I encountered was with deploying to Heroku. I could run the project locally through Gitpod and that worked fine but I was getting build error when trying to deploy to Heroku so my project wouldn't build and wouldn't deploy. I spent a day trying to resolve my error by rechecking procfile, Afan settings, checking views, models and config variables. I then saught help from the Code Institute Tutor Support Team. The build log detailed the error.
