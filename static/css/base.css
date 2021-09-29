@@ -191,6 +191,7 @@ footer {
 }
 
 /* -------------------------------- Toasts */
+/* Toast positioning */
 .message-container {
     position: fixed;
     top: 72px;
@@ -198,10 +199,12 @@ footer {
     z-index: 99999999999;
 }
 
+/* Toast overflow styling */
 .custom-toast {
     overflow: visible;
 }
 
+/* Toast capper styling  */
 .toast-capper {
     height: 2px;
 }
@@ -289,6 +292,7 @@ footer {
         padding-top: 116px;
     }
 
+    /* Body height */
     body {
         height: calc(100vh - 116px);
     }

@@ -240,8 +240,12 @@ Follow these steps to deploy locally:
 * Create a superuser with command "python3 manage.py createsuperuser" and follow the terminal instructions.
 * Run the server with command "python3 manage.py runserver" and the project is now deployed locally.
 
+
 ### **Credits**
+* The website is for a fictional company, the content is fictional and was created by myself.
 * I used this [Stackoverflow post](https://stackoverflow.com/questions/40853952/bootstrap-footer-at-the-bottom-of-the-page) to find the mt-auto Bootstrap flexbox class to fix the footer to the bottom of the page.
+* I used this [post](https://stackoverflow.com/questions/37247474/es6-in-jshint-jshintrc-has-esversion-but-still-getting-warning-using-atom) to get the comment to resolve the JSHint warnings cause by esversion: 6.
+
 
 ### **Acknowledgements**
 * My Code Institute mentor Seun Owonikoko whose feedback throughout the project influenced my website design, content and features.

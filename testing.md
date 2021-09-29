@@ -126,6 +126,30 @@ I passed all my html code through the [W3C Markup Validation Service](https://va
     * **W3C Validation:** No errors found.  
     * **Terminal 'Problems':** No errors found.
 
+## **CSS Validation**
+I passed my css code through the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/#validate_by_input). 
+
+### **Checkout app**
+1. ### **checkout.css**
+    * **CSS Validation:** No errors found.
+    * **Terminal 'Problems':** No errors found.
+
+### **Static folder**
+1. ### **base.css**
+    * **CSS Validation:** No errors found.
+    * **Terminal 'Problems':** No errors found.
+
+## **Javascript Validation**
+I passed my javascript code from script.js through [JSHint](https://jshint.com/).
+
+### **Checkout app**
+1. ### **stripe_elements.js**
+    * **JSHint:** 2 warnings and 1 error found.
+        * Both warnings related to 'Eversion 6'. I researched this and found this [post](https://stackoverflow.com/questions/37247474/es6-in-jshint-jshintrc-has-esversion-but-still-getting-warning-using-atom) giving this comment /*jshint esversion: 6 */ to add to the top of the javascript code to resolve the warnings. I added this comment at the top of my js code and the warnings disappeared.
+        * The error related to a missing semicolon on line 125. Adding a ';' corrected this issue and re-validating the code found no further errors.
+    * **Terminal 'Problems':** No errors found.
+
+
 ## **Manual Testing of features**
 The following manual tests were carried out on Microsoft Edge, Google Chrome and Mozilla Firefox:
 * Social media links were hovered over to makesure they changed to their hover feature of bold to make them look bigger and then clicked on to make sure that they open in a new tab at the correct corresponding landing page.

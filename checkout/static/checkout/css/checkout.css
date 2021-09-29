@@ -12,25 +12,30 @@
   transition: box-shadow 150ms ease;
 }
 
+/* Box shadow */
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
   box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
+/* Autofill colour */
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
 }
 
+/* Placeholder text colour */
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
 
+/* Field label styling */
 .fieldset-label {
     position: relative;
     right: .5rem;
 }
 
+/* Card box styling */
 #payment-form .form-control,
 #card-element {
     color: #000;
