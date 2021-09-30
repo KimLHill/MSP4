@@ -215,6 +215,11 @@ No errors were found in:
 * urls.py
 * views.py
 
+
+### **Testing Compatibility With Different Devices**
+I manually tested the website on a mobile and desktop device. I sent the link for my deployed website to family, who also checked the website on their devices. The website worked for the variety of mobile and desktop devices tested.  I checked that the different grid layouts for the different screen sizes worked as expected and that the logo size, padding and navbar toggle worked as expected. I didn't have access to a tablet device, so I tested this via the 'Inspect accessibility properties' option when right-clicking on the website and choosing the ipad view.
+
+
 ## **Manual Testing of features**
 The following manual tests were carried out on Microsoft Edge, Google Chrome and Mozilla Firefox:
 * Social media links were hovered over to makesure they changed to their hover feature of bold to make them look bigger and then clicked on to make sure that they open in a new tab at the correct corresponding landing page.
@@ -222,6 +227,7 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 * All buttons and links were clicked on to check that they take the user to the correct page.
 * Clicking on the Afan Forest Adventures logo in the navbar returns the user back to the home page.
 * Checked the mouse cursor changed from an arrow to a pointed finger when the user could click/swipe on an item they could select like navbar buttons, products items, blog items and gallery items etc.
+* The back to top arrow buttons worked.
 
 ### **Styling of navbar**
 * I clicked on the secondary navbar tabs and ensured that the correct dropdown menu appeared with the corresponding category options, had the lightgreen background colour styling and the links changed to a white background when hovered over. The navbar worked as expected.
@@ -416,11 +422,25 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 ![Screenshot 2021-09-30 at 08-56-21 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135411429-b5e82636-7f60-4ff1-9071-376b118b1cc7.png)
 
 * I then confirmed that the image name had correctly returned to squirrel.
-* I then did the same test for editing a blog.
+* I then did the same test for editing a blog. Ensuring that In could edit the fields, couldn't submit the form without correctly filling in all the required fields and that the toast alert showed to let me know I was making an edit.
 
+![Screenshot 2021-09-30 at 10-57-51 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135432664-3da3728e-9306-4340-b7cf-797e5e803cbb.png)
 
+* I changed the author and clicked the 'Update blog' button, ensuring  I was taken to that blogs details page, the change had been made and the toast success message appeared.
 
+![Screenshot 2021-09-30 at 11-00-46 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135433663-a20a43bc-f5f5-42f3-b360-5e01703cc5fb.png)
 
+* I then went back to the kayak product I had created and ensured that I could delete the product, but first checked that the 'delete' text changed when I hovered over it to provide a visual indication that I'm about to press the delete button.
+
+![delete-link](https://user-images.githubusercontent.com/74603013/135435873-75195c08-25ac-4da6-8acd-9b2070b1e834.png)
+
+* I then clicked the delete button and ensured that I was returned to the all products page and the toast success for deletion was showing.
+
+![delete-success](https://user-images.githubusercontent.com/74603013/135436204-0423036b-142e-4c26-ab46-5672eeadd31b.png)
+
+* I then viewed the water-based activities to ensure that the kayak product wasn't still showing.
+
+![Screenshot 2021-09-30 at 11-04-42 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135436350-e1261572-7136-4cb7-bb9d-c528de512c1b.png)
 
 ### **Testing blogs and gallery (not superuser)**
 * I clicked on the blog icon in the navbar and ensured that I was taken to the blogs page and could view the blogs.
@@ -438,13 +458,6 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 * I then clicked on an image to make sure I could view more detail about it.
 
 ![image](https://user-images.githubusercontent.com/74603013/135375416-3a237557-cb48-47ac-b001-176a63fb12c1.png)
-
-
-
-
-
-
-
 
 
 
@@ -489,6 +502,7 @@ This fixed the error and the Gallery page displayed correctly.
     * Reduce size and padding of shopping bag buttons.
     * Set qty increment to ignore media query changes.
 * I changed the col-width and css styling for the main callout and 'book your adventure here' button as having the two alongside each other looked bad on smaller screens. I also changed the overlay so that it was just behind the main 'The outdoors awaits...' text and not behind the whole div with button so that it looked smarter and cleaner on the screen. I left the large overlay on the second callout as I didn't think this looked odd. In changing the col widths the callout was much more responsive for mobile devices.
+* During manual testing, the edit blog page wouldn't load and instead an error page displayed. I found this error to be in the action of my edit blog form  that was calling edit_product not edit_form and had the wrong product.id not blog.id. In corrected these two errors and the page worked correctly.
 
 
 ## **Problems Resolved During Deployment**
@@ -515,3 +529,4 @@ The following points were found during testing that need to be rectified in the 
 * Add more content to each page in the way of paragraphs to further enhance the user's understanding of the business and make the website look more professional.
 * Fix image heights (image widths are fixed) so that all images are the same size which will really improve the design of the website.
 * Change toggler position to inprove the look of the website on mobile and tablet devices.
+* Add padding under the forms to give space between the bottom of the form and the footer.

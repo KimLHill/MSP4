@@ -7,6 +7,8 @@ Afan Forest Adventures is a fictional website for a fictional outdoor activity c
 
 If you would like to test the payment functionality of this project, please create an account and use the card number 4242 4242 4242 4242 with any address details, expiry date and CVC that you choose.
 
+![am-i-responsive](https://user-images.githubusercontent.com/74603013/135438053-c6b8d323-3d57-4735-8aca-65792697da0b.png)
+
 #### **My deployed project can be viewed live [here](https://afan-forest-adventures.herokuapp.com/).**
 
 ## **UX** 
@@ -136,6 +138,52 @@ Having created the user stories so that I knew who I was designing my website fo
         * Logo – I chose to position the logo in the top left-hand corner of the website (within the navbar) as this is a convention of websites that users have to come to expect.
         * Call to action buttons - I chose to colour the call-to-action buttons in bright colours to attract the user and make them more likely to click them.
         * Fonts - I kep the fonts as common fonts that are clean and easy to read.
+
+
+### **Database structure**
+* During development, a database was setup using SQLite as this is included and did not require any further installation to support.
+* Upon deployment, Heroku Postgres was used, as this is an add-on service provided by Heroku.
+
+#### **Database models
+* Blog model:
+    * name = models.CharField(max_length=254)
+    * author = models.CharField(max_length=254)
+    * description = models.TextField()
+    * image_url = models.URLField(max_length=1024, null=True, blank=True)
+    * image = models.ImageField(null=True, blank=True)
+
+* Checkout model:
+    * order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+    * product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    * quantity = models.IntegerField(null=False, blank=False, default=0)
+    * lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+
+
+    * name = models.CharField(max_length=254)
+    * author = models.CharField(max_length=254)
+    * description = models.TextField()
+    * image_url = models.URLField(max_length=1024, null=True, blank=True)
+    * image = models.ImageField(null=True, blank=True)
+
+* Product model:
+    * category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    * sku = models.CharField(max_length=254, null=True, blank=True)
+    * name = models.CharField(max_length=254)
+    * description = models.TextField()
+    * price = models.DecimalField(max_digits=6, decimal_places=2)
+    * rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    * image_url = models.URLField(max_length=1024, null=True, blank=True)
+    * image = models.ImageField(null=True, blank=True)
+
+* Profile model:
+    * default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+    * default_country = CountryField(blank_label='Country *', null=True, blank=True)
+    * default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    * default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    * default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    * default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    * default_county = models.CharField(max_length=80, null=True, blank=True)
+
 
 ### **Wireframes**
 Before I started coding my project, I created wireframes using Balsamiq. I created wireframes for mobile, tablet and desktop devices to decide the layout at different screen sizes. I also used the user stories to add more detail to the website to provide a better user experience. 
@@ -323,12 +371,24 @@ Ensure you have the prerequisites mentioned above.
         * pip3 install gunicorn
     16. Ran pip3 freeze --local > requirements.txt
     17. Ensured I had the following in my Procfile echo web: gunicorn afan-forest-advanetures.wsgi:application 
-    18. Logged into Heroku using heroku login -i and singing in
-    16.  committed the requirements.txt and Procfiles.
-    18. I then did a Git push to push them to GitHub.
-    19. Back on Heroku, I clicked the 'Enable Automatic Deployment' button.
-    20. Clicked 'Deploy Branch'.
-    21. Finally, I clicked on the 'View' button to view my deployed project.
+    18. Committed the requirements.txt and Procfiles did a Git push to push them to GitHub.
+    19. Logged into Heroku using heroku login -i and singed into my account.
+    20. Migrated to Postgress using:
+        * python manage.py makemigrations
+        * python manage.py migrate
+    21. Created a superuser using python3 manage.py createsuperuser and followed the instructions in the terminal.
+    22. Loaded the fixtures into the database by running:
+        * python3 manage.py loaddata categories
+        * python3 manage.py loaddata products
+        * python3 manage.py loaddata blog
+        * python3 manage.py loaddata gallery
+    23. Ran heroku config:set DISABLE_COLLECTSTATIC=1 --app afan-forest-adventures
+    24. Added 'afan-forest-adventures.herokuapp.com' to the 'allowed hosts' in Afan settings file
+    25. Committed and pushed the changes to GitHub.
+    26. Ran heroku git:remote -a afan-forest-adventures
+    27. Ran git push heroku main
+    28. Back on Heroku, I opened my deployed app using the 'Open app' button.
+
 
 ### **Credits**
 * The website is for a fictional company, the content is fictional and was created by myself.
