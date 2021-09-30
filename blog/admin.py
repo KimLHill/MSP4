@@ -3,6 +3,7 @@ from .models import Blog
 
 # Blog information
 
+
 class BlogAdmin(admin.ModelAdmin):
     list_display = (
         'name',

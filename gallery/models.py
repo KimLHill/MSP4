@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Gallery model. Requires name, author and description. 
 class Gallery(models.Model):
     name = models.CharField(max_length=254)

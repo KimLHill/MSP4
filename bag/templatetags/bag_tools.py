@@ -2,6 +2,8 @@ from django import template
 
 
 register = template.Library()
+# Calculate bag line subtotals
+
 
 @register.filter(name='calc_subtotal')
 def calc_subtotal(price, quantity):

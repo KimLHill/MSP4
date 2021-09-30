@@ -3,6 +3,7 @@ from .models import Gallery
 
 # Gallery model
 
+
 class GalleryAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -15,4 +16,3 @@ class GalleryAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Gallery, GalleryAdmin)
-

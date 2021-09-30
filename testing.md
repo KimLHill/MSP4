@@ -34,7 +34,7 @@
 
 
 ## **HTML Validation**
-I passed all my html code through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) and also used the 'Problems' feature in the Gitpod terminal to identify any problems in my code.
+I passed all my html code through the [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input).
 
 **Note: Following errors ignored in W3CValidation testing (ignored in my error reporting below):**
 * On most .html pages I had validation errors of: "Bad value" relating to my use of {{ url_for}} internal links for Python. These errors were to be expected as the html validator was not expecting to find these in html code. I therefore left the code the same and these errors still exist.
@@ -45,99 +45,81 @@ I passed all my html code through the [W3C Markup Validation Service](https://va
 ### **Bag app**
 1. #### **bag.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** 4 x flake8 errors for "line too long". I chose to ignore these erros because they relate to the AUTH_PASSWORD_VALIDATORS.
 
 ### **Blog app**
 1. ### **add_blog.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 2. ### **blog_detail.html** 
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
-3. ### **blog_detail.html**
+3. ### **blog.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
-4. ### **blog.html**
+4. ### **edit_blog.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
-
-5. ### **edit_blog.html**
-    * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 ### **Checkout app**
 1. ### **checkout_success.html**
     * **W3C Validation:** "Error: Stray end tag div." This was caused by an additional div tag at the end of my code. I removed this unnecessary element and my code passed through the validator.
-    * **Terminal 'Problems':** No errors found.
 
 2. ### **checkout.html** 
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 ### **Gallery app**
 1. ### **add_gallery.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 2. ### **edit_gallery.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 3. ### **gallery_detail.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 4. ### **gallery.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 ### **Home app**
 1. ### **index.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 ### **Products app**
 1. ### **add_product.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 2. ### **edit_product.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 3. ### **product_detail.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
 
 4. ### **products.html**
     * **W3C Validation:** Errors relating to the product sort selector code. As this was code that I had created by following the Code Institute Boutique Ado tutorial, I left this code unchanged. The errors related to the use of '==', 'not serializable as XML 1.0.' and 'none_none'.
-    * **Terminal 'Problems':** No errors found.
 
 ### **Profiles app**
 1. ### **add_product.html**
     * **W3C Validation:** Error relating to the use of tr tags used to create the rows in the form. I chose to ignore this error as it was used for the table formatting and I checked against the Code Institute tutorial example code which matched mine. 
-    * **Terminal 'Problems':** No errors found.
 
 ### **Templates app**
 1. ### **base.html**
     * **W3C Validation:** No errors found.  
-    * **Terminal 'Problems':** No errors found.
+
+2. ### **footer.html**
+    * **W3C Validation:** No errors found.  
+
+3. ### **main-nav.html**
+    * **W3C Validation:** No errors found.  
 
 ## **CSS Validation**
 I passed my css code through the [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/#validate_by_input). 
 
 ### **Checkout app**
 1. ### **checkout.css**
-    * **CSS Validation:** No errors found.
-    * **Terminal 'Problems':** No errors found.
+    * **CSS Validation:** No errors found..
 
 ### **Static folder**
 1. ### **base.css**
     * **CSS Validation:** No errors found.
-    * **Terminal 'Problems':** No errors found.
 
 ## **Javascript Validation**
 I passed my javascript code from script.js through [JSHint](https://jshint.com/).
@@ -147,8 +129,88 @@ I passed my javascript code from script.js through [JSHint](https://jshint.com/)
     * **JSHint:** 2 warnings and 1 error found.
         * Both warnings related to 'Eversion 6'. I researched this and found this [post](https://stackoverflow.com/questions/37247474/es6-in-jshint-jshintrc-has-esversion-but-still-getting-warning-using-atom) giving this comment /*jshint esversion: 6 */ to add to the top of the javascript code to resolve the warnings. I added this comment at the top of my js code and the warnings disappeared.
         * The error related to a missing semicolon on line 125. Adding a ';' corrected this issue and re-validating the code found no further errors.
-    * **Terminal 'Problems':** No errors found.
 
+### **Profiles app**
+1. ### **countryfield.js**
+    * **JSHint:** 1 warnings found.
+        * The warning related to an "unnecessary semicolon" on line 5. Removing the ';' corrected this issue and re-validating the code found no further errors.
+    
+
+
+## **PEP8 Validation**
+I passed my Python code through [PEP8 Online](http://pep8online.com/) and also used the 'Problems' feature in the Gitpod terminal to identify any problems in my code.
+
+**Note: Following errors commonly found in PEP8 test (ignored in my error reporting below):**
+Common errors identified in my Python code included:
+* An error relating to expecting to find blank lines, this was because I had inserted my comments into the blank spaces, so the validator was reading 1 blank line not two. I added the extra blank lines where required to resolve these errors.
+* A warning of "No newline at end of file". I addded the extra line where required to resolve these errors.
+* Flake 8 errors for lines too long. I fix the line lenght errors where I could using '()' to split imports and '\' for other code. I didn't correct the errorn if breaking the line risked breaking the code such as in validators.
+
+### **Afan app**
+No errors were found in:
+* urls.py
+* wsgi.py
+
+1. ### **settings.py**
+    * **PEP8 Validation:** 4 errors and 1 warning
+        * 4 x flake8 errors for "line too long". I chose to ignore these erros because they relate to the AUTH_PASSWORD_VALIDATORS.
+        * The warning related to a trailing space, I removed the space to fix this error.
+
+### **Bag app**
+No errors were found in:
+* apps.py
+* bag_tools.py
+* contexts.py
+* urls.py
+* views.py
+
+### **Blog app**
+No errors were found in:
+* admin.py
+* forms.py
+* models.py
+* views.py
+
+### **Checkout app**
+No errors were found in:
+* init.py
+* admin.py
+* apps.py
+* forms.py
+* models.py
+* signals.py
+* urls.py
+* views.py
+* webhook_handlers.py
+* webhooks.py
+
+### **Gallery app**
+* admin.py
+* apps.py
+* forms.py
+* models.py
+* urls.py
+* views.py
+
+### **Home app**
+* apps.py
+* urls.py
+* views.py
+
+### **Products app**
+* admin.py
+* apps.py
+* forms.py
+* models.py
+* urls.py
+* views.py
+
+### **Profiles app**
+* apps.py
+* forms.py
+* models.py
+* urls.py
+* views.py
 
 ## **Manual Testing of features**
 The following manual tests were carried out on Microsoft Edge, Google Chrome and Mozilla Firefox:

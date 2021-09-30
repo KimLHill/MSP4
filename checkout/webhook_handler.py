@@ -69,14 +69,18 @@ class StripeWH_Handler:
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
                 profile.default_town_or_city = shipping_details.address.city
-                profile.default_street_address1 = shipping_details.address.line1
-                profile.default_street_address2 = shipping_details.address.line2
+                profile.default_street_address1 = (
+                        shipping_details.address.line1
+                    )
+                profile.default_street_address2 = (
+                        shipping_details.address.line2
+                    )
                 profile.default_county = shipping_details.address.state
                 profile.save()
 
         # If order doesn't exist in database, get order details
         order_exists = False
-        # Added delay to ensure the order isn't added to database twice if view is slow
+        # Added delay so order isn't added to database twice if view is slow
         attempt = 1
         while attempt <= 5:
             try:
@@ -103,7 +107,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]} | \
+                SUCCESS: Verified order already in database',
                 status=200)
         else:
             # create order if it doesn't exist
@@ -133,7 +138,8 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data[
+                                'items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -149,7 +155,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} | \
+            SUCCESS: Created order in webhook',
             status=200)
 
     # Handle the payment_intent.payment_failed webhook

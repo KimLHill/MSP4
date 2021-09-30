@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 
@@ -12,6 +14,7 @@ from django.conf import settings
 
 import stripe
 import json
+
 
 # Determine if user wants to save their info to their profile
 @require_POST
@@ -67,7 +70,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for size, quantity in item_data[
+                                    'items_by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -77,7 +81,8 @@ def checkout(request):
                 # If product doesn't exist, display error message
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag \
+                        wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     # Delete order and return to bag
@@ -87,7 +92,8 @@ def checkout(request):
             # Option to save user profile information 
             request.session['save_info'] = 'save-info' in request.POST
             # Redirect to checkout success page
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
@@ -96,7 +102,7 @@ def checkout(request):
         bag = request.session.get('bag', {})
         if not bag:
             # If empty, display error message & return to products page
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag")
             return redirect(reverse('products'))
     
         # Get bag contents
@@ -143,6 +149,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 # Handle checkout success
 def checkout_success(request, order_number):

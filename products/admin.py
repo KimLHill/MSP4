@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category
 
+
 # Product model
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
@@ -13,6 +14,8 @@ class ProductAdmin(admin.ModelAdmin):
     )
 
     ordering = ('sku',)
+    
+
 # Category model
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (

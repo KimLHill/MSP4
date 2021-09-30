@@ -7,6 +7,7 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+
 # Code created from following Code Institute Boutique Ado tutorial videos
 # View for all products
 def all_products(request):
@@ -40,15 +41,15 @@ def all_products(request):
             # Get requested data
             query = request.GET['q']
             if not query:
-                # Error message if search performed with no search criteria entered
+                # Error message if performed with no search criteria entered
                 messages.error(request, "Please enter your search criteria!")
                 # Redirect back to products
                 return redirect(reverse('products'))
             
-            # Return results when search criteria matches in either name or description
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            # Return results when search criteria matches name or description
+            queries = Q(name__icontains=query) | Q(
+                        description__icontains=query)
             products = products.filter(queries)
-
 
     context = {
         'products': products,
@@ -71,6 +72,7 @@ def product_detail(request, product_id):
 
     return render(request, 'products/product_detail.html', context)
 
+
 # Login required to add product
 @login_required
 def add_product(request):
@@ -91,7 +93,8 @@ def add_product(request):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             # If invalid, show error message
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm()
         
@@ -101,6 +104,7 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
 
 # Login required to edit product
 @login_required
@@ -119,7 +123,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -131,6 +136,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 # Login required to delete product
 @login_required

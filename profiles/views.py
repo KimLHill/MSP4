@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 
+
 # Login required to display user profile
 @login_required
 def profile(request):
@@ -19,7 +20,8 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
         else:
             # If invalid, show error message
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(request, 'Update failed. \
+                Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -33,12 +35,13 @@ def profile(request):
 
     return render(request, template, context)
 
+
 # View for order history
 def order_history(request, order_number):
     # Get the order
     order = get_object_or_404(Order, order_number=order_number)
 
-    # MEssage to confirm to user they're looking at a past order
+    # Message to confirm to user they're looking at a past order
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'

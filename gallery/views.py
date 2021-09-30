@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Gallery
 from .forms import GalleryForm
 
+
 # View for gallery page
 def gallery(request):
     """ A view to show gallery page """
@@ -30,6 +31,7 @@ def gallery_detail(request, gallery_id):
 
     return render(request, 'gallery/gallery_detail.html', context)
 
+
 # Require user to be logged in to add to gallery
 @login_required
 def add_gallery(request):
@@ -50,7 +52,8 @@ def add_gallery(request):
             return redirect(reverse('gallery_detail', args=[gallery.id]))
         else:
             # If invalid, show error message
-            messages.error(request, 'Failed to add image. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add image. \
+                Please ensure the form is valid.')
     else:
         form = GalleryForm()
         
@@ -60,6 +63,7 @@ def add_gallery(request):
     }
 
     return render(request, template, context)
+
 
 # Require user to be logged in to edit gallery
 @login_required
@@ -78,7 +82,8 @@ def edit_gallery(request, gallery_id):
             messages.success(request, 'Successfully updated gallery!')
             return redirect(reverse('gallery_detail', args=[gallery.id]))
         else:
-            messages.error(request, 'Failed to update gallery. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update gallery. \
+                Please ensure the form is valid.')
     else:
         form = GalleryForm(instance=gallery)
         messages.info(request, f'You are editing {gallery.name}')
@@ -90,6 +95,7 @@ def edit_gallery(request, gallery_id):
     }
 
     return render(request, template, context)
+
 
 # Require user to be logged in to delete gallery image
 @login_required
@@ -107,5 +113,3 @@ def delete_gallery(request, gallery_id):
     messages.success(request, 'Image deleted!')
     # Redirect back to gallery page
     return redirect(reverse('gallery'))
-
-

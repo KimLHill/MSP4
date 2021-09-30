@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Blog
 from .forms import BlogForm
 
+
 # View for blog page
 def blog(request):
     """ A view to show blog page """
@@ -51,7 +52,8 @@ def add_blog(request):
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
             # If invalid, show error message
-            messages.error(request, 'Failed to add blog. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add blog. \
+                Please ensure the form is valid.')
     else:
         form = BlogForm()
         
@@ -61,6 +63,7 @@ def add_blog(request):
     }
 
     return render(request, template, context)
+
 
 # Require user to be logged in to edit a blog
 @login_required
@@ -82,7 +85,8 @@ def edit_blog(request, blog_id):
             # Take user to that blog's details page
             return redirect(reverse('blog_detail', args=[blog.id]))
         else:
-            messages.error(request, 'Failed to update blog. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update blog. \
+                Please ensure the form is valid.')
     else:
         form = BlogForm(instance=blog)
         messages.info(request, f'You are editing {blog.name}')
@@ -94,6 +98,7 @@ def edit_blog(request, blog_id):
     }
 
     return render(request, template, context)
+
 
 # Require user to be logged in to delete a blog
 @login_required
@@ -111,4 +116,3 @@ def delete_blog(request, blog_id):
     messages.success(request, 'Blog deleted!')
     # Redirect back to products page
     return redirect(reverse('blog'))
-
