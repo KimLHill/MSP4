@@ -264,8 +264,21 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 
 
 ### **Testing search bar**
+* I tested the search bar by first doing a search with no criteria and checking that it took me to the all products page and showed the toast  error message.
+
+![no-search-criteria](https://user-images.githubusercontent.com/74603013/135384647-0f624eab-06f1-40d3-b5f2-fafef65d3c8f.png)
+
+* I confirmed that searching for a product by name or category worked but typing water.
+
+![Screenshot 2021-09-30 at 04-58-07 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135384822-3ec3fade-01fa-4cf7-8904-77d6c3039973.png)
+
+* Then confirmed that the search functionality was also incorporating the description by searching for food which i knew wasn't in a product name or category but was in a product description. The correct product was returned.
+
+![Screenshot 2021-09-30 at 05-00-47 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135385027-84243d11-ee15-4bac-a976-8f9286da4b3c.png)
+
 
 ### **Testing sort products**
+* I navigated to the all products page and then went through each of the sort product options ensuring that the correct order then displayed. 
 
 ### **Testing Sign up form**
 * I tested the link to login page if user already had account worked.
@@ -274,14 +287,77 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 
 ![sign-up-error](https://user-images.githubusercontent.com/74603013/135375986-5ecbf75d-d712-48a5-abe0-8ce3c2821805.png)
 
-* I then submitted the form and confirmed that the page showed the 'verify email message' and the toast-alert message also displayed.
+* I then entered correct, viable information and submitted the form and confirmed that the page showed the 'verify email message' and the toast-alert message also displayed.
 
-![verify-email](https://user-images.githubusercontent.com/74603013/135376225-37587a14-518a-449e-a4c6-30221978040e.png)
+![verify-email-office](https://user-images.githubusercontent.com/74603013/135379433-2934225d-076a-43fd-a875-ceacc2c0f660.png)
 
+* I tried to login without verifying my email and confirmed that I was taken to the 'Verify your email address' page again, couldn't access my account and toast alert confirmed where the verification email had been sent.
+
+![confirm-verify](https://user-images.githubusercontent.com/74603013/135378503-1416565f-7a6e-43f8-bffa-c5e0d42e9d9d.png)
+
+* I then checked my email account to confirm receipt of the email.
+
+![email-inbox](https://user-images.githubusercontent.com/74603013/135379592-edc16930-cca7-44ac-b3cc-5b4ddde800d0.png)
+
+* I also tested using a gmail address to confirm that the email were working for different email platforms that users might use.
+
+![gmail-verify-email](https://user-images.githubusercontent.com/74603013/135379885-60bda79c-d175-4c02-ba53-60061d036e6a.png)
+
+* I checked the email contained the verification process and followed the instructions to register my account.
+* I clicked the verification link in the email and confirmed that I was taken to the website confirm email page.
+
+![confirm](https://user-images.githubusercontent.com/74603013/135380106-a04819e8-199c-4885-beb1-f89588f7d280.png)
+
+* I clicked the confirm button to makesure that the toast success for confirmed email verifcation appeared along with the contents of my bag that I had added before registering for an account and I was taken to the sign in page.
+
+![confirm-success](https://user-images.githubusercontent.com/74603013/135380427-69d8d69c-496a-4000-a526-563269a34585.png)
+
+* Using the same login details as I registered with, I successfully signed in
+
+![sign-in-success](https://user-images.githubusercontent.com/74603013/135380707-351e4f72-d46a-4dab-88db-f6d56477e1a1.png)
+
+* I then went to my profile to confirm that it was empty
+
+![empty-profile](https://user-images.githubusercontent.com/74603013/135380935-a478ddf9-da2f-4d9c-ab92-b9310a8dd708.png)
+
+* I then tried to resubmit the sign up form with the same details to make sure that I was in the database and that it wouldn't allow another user to register with the same details or for someone with an account to re-register.
+
+![already-exists-error](https://user-images.githubusercontent.com/74603013/135377536-ad25c20d-895d-4514-9d24-d3e21124ee00.png)
 
 
 ### **Testing checkout form**
-* I made sure that the page displayed as intended with the form and order summary displayed. I checked that the placeholder text was in the form fields, that the user had to submit the madatory fields and in the specified format and that the country fields menu worked. I also confirmed that the links to 
+* Whilst still logged into my account, I went to the bag then checkout page. I made sure that the page displayed as intended with the form and order summary displayed. I checked that the placeholder text was in the form fields, that the user had to submit the mandatory fields and in the specified format and that the country fields menu worked. I also checked that the 'Keep Shopping' button worked as expected.
+* I then completed the checkout form with the correct, valid details and Stripe test payment card details. I confirmed that I could tick the box to save details to my profile, which I selected. I also checked the warning message next to checkout confirms to the user that they are about to submit a payment and that it was for the correct value as in my bag.
+
+![checkout](https://user-images.githubusercontent.com/74603013/135382450-268ce603-d3c1-459f-9ab3-99c75dda966b.png)
+
+* I then submitted the form using the 'Secure Checkout' button and confirmed that I could see the overlay with the circular spinner as visual feedback to confirm the form was being submitted and that the overlay covered the page so that I couldn't re-submit or trying editing the form.
+* I confirmed that I was taken to the checkout success page where I could see an order summary and the toast-success to confirm my order had been placed.
+
+![order-success-summary](https://user-images.githubusercontent.com/74603013/135382876-d1027383-db97-4034-ba9c-d297a813c112.png)
+
+* I confirmed that I received an order confirmation email.
+
+![inbox-order-confirm](https://user-images.githubusercontent.com/74603013/135383071-c8f2ae80-4f7b-4919-a2df-e06765776d71.png)
+
+* Confirmed the email was populated with the information I had put into the checkout form.
+
+![Screenshot 2021-09-30 at 04-38-40 Webmail Afan Forest Adventures Confirmation for Order Number 12FC9957F3A541A7AC4CCFAF6BDF](https://user-images.githubusercontent.com/74603013/135383238-1d69b6ea-bdd5-4185-86d9-295dbd377ca3.png)
+
+* I then went to my profile and confirmed that it showed my order history and that it had populated my details in the profile form from the checkout form.
+
+![populated-profile](https://user-images.githubusercontent.com/74603013/135383455-3d14719d-9ec0-4ccc-a872-8511691c44ec.png)
+
+
+### **Testing update profile info form**
+* I edited the phone number and country in my profile and clicked the 'Update Information' button. I then confirmed that I was still in my own account that was showing the same order history but now correctly showed my updated details.
+
+![update-profile](https://user-images.githubusercontent.com/74603013/135383951-f1828544-a50d-41b8-822e-4bb16e4a5c11.png)
+
+### **Testing search bar**
+
+
+
 
 ### **Testing blogs and gallery **
 * I clicked on the blog icon in the navbar and ensured that I was taken to the blogs page and could view the blogs.
