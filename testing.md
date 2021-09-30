@@ -506,3 +506,12 @@ but the gallery and blog pages were fine in the localhost run from Gitpod:
 
 As the project worked locally, this helped me to identify the source of the problem. I had forgotten to do the make migrations to Heroku Postgress. I made these migrations and the loaddata commands for the categories, products, blog and fixtures and the deployed app worked correctly.
 
+
+## **Features Still To Implement**
+The following points were found during testing that need to be rectified in the future to make the website work better for all users:
+* Build in modal to confirm deletion of products/blogs/images to prevent accidental deletes.
+* Fix bug allowing footer to move from bottom of page on some pages.
+* Fix bug allowing excessive padding to some of the pages main body.
+* Add more content to each page in the way of paragraphs to further enhance the user's understanding of the business and make the website look more professional.
+* Fix image heights (image widths are fixed) so that all images are the same size which will really improve the design of the website.
+* Change toggler position to inprove the look of the website on mobile and tablet devices.

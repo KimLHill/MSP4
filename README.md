@@ -153,9 +153,30 @@ Before I started coding my project, I created wireframes using Balsamiq. I creat
 
 
 ### **Features**
-Features consistent across all the different pages of my project include:
+Features consistent across multiple different pages of my project include:
 1. **Navbar**
-    * The navbar has the Afan Forest Adventures logo which, when clicked, returns the user to the home page. In the centre is a search bar with a visual search icon and 'search' placeholder text to make it really obvious what this feature is for. On the right-hand side are the navigation tabs linking to account, shopping bag, blog and gallery. These have visual icons relating to the tab to aid the user's understanding and for better visual appeal. The black (#000) fits with the colour scheme and provides a good contrast from the white background. A text-shadow effect, further enhances readability. When the user hovers over a navbar tab, the background colour of the tab changes to provide visual feedback as to which tab they are about to click. The navbar collapses to a toggle button on tablet and mobile devices for an improved user experience on smaller screen sizes. The navbar tabs have dropdown menus to further aid the user in navigating the website, these change depending on whether or not the user is logged in, to provide a better user experience by showing them only what they need.
+    * The navbar has the Afan Forest Adventures logo which, when clicked, returns the user to the home page. In the centre is a search bar with a visual search icon and 'search' placeholder text to make it really obvious what this feature is for. On the right-hand side are the navigation tabs linking to account, shopping bag, blog and gallery. These have visual icons relating to the tab to aid the user's understanding and for better visual appeal. The black (#000) fits with the colour scheme and provides a good contrast from the white background. The navbar collapses to a toggle button on tablet and mobile devices for an improved user experience on smaller screen sizes. The navbar tabs have dropdown menus to further aid the user in navigating the website, these change depending on whether or not the user is logged in or a superuser, to provide a better user experience by showing them only what they need. 
+
+2. **Title**
+    * Each page starts with a simple title, that explains the purpose of that page. The text colour is consistent across all pages and fits with the colour scheme and font styling used across the website.
+
+3. **Footer**
+    * The footer is the same black colour (#000) across all pages to provide consistency in design. It includes social media links and copyright information which are coloured white (#fff) with headings in a light green (#93c47d) to fit with the rest of the text colour across the website. The footer is the normal place that a user would look for this information. The social media links and email adress and icon open a new tab, when clicked by the user, to take them to the corresponding website.
+
+4. **Toast messages**
+    * Toast messages are the used across the website to provides constant helpful prompts and feedback for all users. They are the same in style, font size and positioning but have different colours to denote different messages e.g. success is a different colour to failure to further enhance the user's understanding. They are all full-screen width and located at the top of the page the user is on to be easily seen, furthermore the toast messages have to be manually closed which ensures the user has seen them.
+
+5. **Interactive features**
+    * When the user hovers over a button, link or Javascript element such as the navbar tabs, buttons, logo, social media link icons or the products, blogs or gallery images; then the mouse cursor changes from an arrow to a pointed finger cursor to provide a visual indication to the user that they can click on this item and to encourgae them to click it.
+
+6. **Forms**
+    * Forms are consistent in style and formatting across the website with placeholder text to aid the user in completing the forms, error messages if the field is invalid and asterix markers as a convention the user will be familiar with for denoting a required field.
+
+7. **Product, blog and gallery styling**
+    * The way the user navigates the products, blogs and gallery pages is the same to provide consistency. There is a title naming the page they are on and then the products/blogs/gallery images are displayed. They are the same in style with an image, name and basic infromation providing the user with just enough information to decide if they want to view more details. For all three pages, the user clicks on to the product/blog/image of interest which opens the corresponding details page where they are provided with more information.
+
+**Additional features for superusers**
+    * The styling is of the products/blogs/gallery is the same as for other users, but superusers have an edit and delete button next to each item that allows them to quick manage the store.
 
 ### **Additional Features Implemented**
 * I liked the idea of having the prompt to encourage users to spend more as this fits with the purpose of the website. The website was designed with a free next-day delivery bonus if the user spent £50 and added a percentage delivery charge if the grand total of the shopping bag was under this value. However, as the products sold by Afan Forest Adventures would not be shipped, no delivery charge was required at the moment. However this functionality may be required in the future for example if they decide to sell clothing or other phycial merchandise that needs to be shipped to the customer. So I set the free delivery cutoff to 0 so no charge was incurred, but so that the functionality remained in place to be easily added in the future. I Then added the incentive of a free coffee to be redeemed in the shop onsite, so nothing physical needed to be sent to the user, but provided a nice bonus to user's to spend more money! This prompt was in the toast-success when a user added an item to their basket that was under £50, with a further prompt in the shopping bag totals to further promote spending more money on the site!
@@ -176,6 +197,18 @@ Features consistent across all the different pages of my project include:
 * For the product search bar to enable users to quickly and easily search for the products they want.
 * For the product sort options to choose and display products in the order of the users preference e.g. price low to high.
 * To update or remove items from shopping bag to allow the user to easily adjust their order.
+
+
+### **Future Scope**
+I think that there is a lot of potential to further develop this website, which is unfortunately beyond the scope and time frame of this Milestone Project. In the future, I would like to implement the following features:
+* Incorporate Paypal as an additional payment method as this is something customer's are likely to expect.
+* Add the ability choose dates for the activities and courses so the user actually makes a proper booking not just buying the product/activity/course.
+* Add a club or memberhsip option to ensourage more users and build the fan base for the business and website.
+* Add a hire option alongside the guided options.
+* Add a far greater number of products, blogs and gallery images to increase the content of the website.
+* Intergrate a map or video etc. as a fun and interactive way of promoting the business and improving the visual appeal of the website.
+* Allow anyone logged into their account ot upload images to the gallery.
+* Add other product categories like a clothing range or other merchandise.
 
 
 ### **Technologies Used**
@@ -257,6 +290,45 @@ Follow these steps to deploy locally:
 * Create a superuser with command "python3 manage.py createsuperuser" and follow the terminal instructions.
 * Run the server with command "python3 manage.py runserver" and the project is now deployed locally.
 
+#### Heroku Depoloyment ####
+Ensure you have the prerequisites mentioned above. 
+* Then to deploy to Heroku I did the following steps.
+*   1. Opened Heroku.
+    2. Signed into my account.
+    3. Created a new app with a unique name that had not already been taken (this project uses 'afan-forest-adventures'). 
+    4. I then selected the region closest to me: 'Europe'.
+    5. Clicked the 'Create app' button.
+    6. I opened the 'Settings' tab.
+    7. Clicked the 'Reveal Config Variables' button.
+    8. I then inputted the Config Vars name and associated value/password for the following:
+        * AWS_ACCESS_KEY_ID
+        * AWS_SECRET_ACCESS_KEY
+        * DATABASE_URL
+        * EMAIL_HOST_PASS
+        * EMAIL_HOST_USER
+        * SECRET_KEY
+        * STRIPE_PUBLIC_KEY
+        * STRIPE_SECRET_KEY
+        * STRIPE_WH_SECRET
+        * USE_AWS
+    9. Clicked the 'Deploy' tab.
+    10. Selected the 'Connect to Github' button next to 'Deployment method'.
+    11. Ensured my GitHub profile was displayed and then selected my GitHub repository for the project (this project is called KimLHill/MSP4).
+    12. Then clicked the 'Connect' button.
+    13. Back on Heroku, I clicked the 'Enable Automatic Deployment' button.
+    14. Configured Heroku Postgres database 
+    15. Back on Gitpod, I added the following dependencies:
+        * pip3 install dj_database_url
+        * pip3 install psycopg2_binary
+        * pip3 install gunicorn
+    16. Ran pip3 freeze --local > requirements.txt
+    17. Ensured I had the following in my Procfile echo web: gunicorn afan-forest-advanetures.wsgi:application 
+    18. Logged into Heroku using heroku login -i and singing in
+    16.  committed the requirements.txt and Procfiles.
+    18. I then did a Git push to push them to GitHub.
+    19. Back on Heroku, I clicked the 'Enable Automatic Deployment' button.
+    20. Clicked 'Deploy Branch'.
+    21. Finally, I clicked on the 'View' button to view my deployed project.
 
 ### **Credits**
 * The website is for a fictional company, the content is fictional and was created by myself.
