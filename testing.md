@@ -232,11 +232,77 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 ![product-qty-check](https://user-images.githubusercontent.com/74603013/135369642-d1cf7427-d6ec-402e-855c-38a3847dd856.png)
 
 ### **Testing toast-success**
-* I added an item to my basket to ensure the toast-success appeared to confirm to the user which item had been added, quantity, current bag cost and option to checkout. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. This worked as planned.
+* I added an item to my bag to ensure the toast-success appeared to confirm to the user which item had been added, quantity, current bag cost and option to checkout. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. This worked as planned.
 
-![prompt-to-spend-more](https://user-images.githubusercontent.com/74603013/135245904-93f81cde-c8c6-466b-a272-5aa54c2b9224.png)
+![toast-success-2](https://user-images.githubusercontent.com/74603013/135371022-a518773d-6c5c-43aa-8f3b-5bc7a4c4f39a.png)
 
 * I then added an item to my basket that was more than £50 to ensure the prompt wasn't shown in the success-toast.
+
+![toast-success-no-prompt](https://user-images.githubusercontent.com/74603013/135371228-8e69705b-86c8-4fd7-af55-821226e7a523.png)
+
+### **Testing shopping bag**
+ 
+* I added an item to my bag, then viewed the bag. I made sure the shopping bag contained the product image, name, SKU, quantity, subtotal for the item the user had selected and checked that the bag total was correct. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. I also made sure that once an item was in the bag that the bag icon in the navbar displayed teh current bag total price. This worked as planned.
+
+![bag-prompt](https://user-images.githubusercontent.com/74603013/135372102-1a4dead7-ada3-44f8-86b6-f38b2a782cf9.png)
+
+* I checked that if I added different items to my bag, that they displayed on their own row
+
+
+![bag-rows](https://user-images.githubusercontent.com/74603013/135372460-3022ed97-75c7-416e-ab4d-707e1c324f43.png)
+
+* I checked that the bag totals were calculated correctly with multiple items in the bag and that the prompt to spend more was removed if the bag was over £50 in total. I checked the user has the option to checkout or keep shopping.
+
+![bag-total-correct](https://user-images.githubusercontent.com/74603013/135372674-beef5bb5-cb13-40a9-8f6c-060a48ceff08.png)
+
+* I checked that I could update the qty from the bag page and that the success-toast with updated qty appeared.
+![bag-update](https://user-images.githubusercontent.com/74603013/135373480-d36cf1a8-a1da-4fdc-bd6c-5c3789ca4f11.png)
+
+* I then removed an item from the bag to confirm that the 'remove' button also worked and that the toast-success for removal displayed with the correct message. Along with the bag and total updating.
+
+![remove-item](https://user-images.githubusercontent.com/74603013/135373765-b32e07bf-1ea7-45ba-b4d2-cf94d52b9fd1.png)
+
+
+### **Testing search bar**
+
+### **Testing sort products**
+
+### **Testing Sign up form**
+* I tested the link to login page if user already had account worked.
+* I checked placeholder text and mandatory form fields were denoted.
+* I tested the field validation messages by entering an unsuitable password.
+
+![sign-up-error](https://user-images.githubusercontent.com/74603013/135375986-5ecbf75d-d712-48a5-abe0-8ce3c2821805.png)
+
+* I then submitted the form and confirmed that the page showed the 'verify email message' and the toast-alert message also displayed.
+
+![verify-email](https://user-images.githubusercontent.com/74603013/135376225-37587a14-518a-449e-a4c6-30221978040e.png)
+
+
+
+### **Testing checkout form**
+* I made sure that the page displayed as intended with the form and order summary displayed. I checked that the placeholder text was in the form fields, that the user had to submit the madatory fields and in the specified format and that the country fields menu worked. I also confirmed that the links to 
+
+### **Testing blogs and gallery **
+* I clicked on the blog icon in the navbar and ensured that I was taken to the blogs page and could view the blogs.
+
+![blogs](https://user-images.githubusercontent.com/74603013/135373954-4a5c6130-35be-434b-a001-b3f8f8c97224.png)
+
+* I then clicked on a blog to confirm that I was taken to the corresponding blog details page to read the blog contents.
+
+![blog-detail](https://user-images.githubusercontent.com/74603013/135374157-02a3b7e7-89af-4d69-91e3-e4963817da61.png)
+
+* I then repeated this process but for the gallery navbar icon checking I went to the gallery page 
+
+![gallery](https://user-images.githubusercontent.com/74603013/135375258-d78c45a9-ec36-4849-8bfd-c98431bc4499.png)
+
+* I then clicked on an image to make sure I could view more detail about it.
+
+![image](https://user-images.githubusercontent.com/74603013/135375416-3a237557-cb48-47ac-b001-176a63fb12c1.png)
+
+
+
+
 
 
 

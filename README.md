@@ -5,6 +5,8 @@ This project has been created for my Milestone Project 4 for the Full Stack Deve
 
 Afan Forest Adventures is a fictional website for a fictional outdoor activity company. The aim is to provide a website where users can find and buy activities sold by Afan Forest Adventures, with the prupose of increasing the sales for the company. Users will interact with the website through being able to find, book and pay, edit their bookings, view current and past bookings and create reviews of past bookings.
 
+If you would like to test the payment functionality of this project, please create an account and use the card number 4242 4242 4242 4242 with any address details, expiry date and CVC that you choose.
+
 #### **My deployed project can be viewed live [here](https://afan-forest-adventures.herokuapp.com/).**
 
 ## **UX** 
