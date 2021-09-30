@@ -225,10 +225,22 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 
 ![dropdown-navbar-styling](https://user-images.githubusercontent.com/74603013/135285484-e3c27d54-5be2-4925-8504-32100c20c4b4.png)
 
+### **Testing product page**
+* I checked that I could view the product image, product name, product description, rating and price as intended.
+* I checked that the qty + and - buttons worked as intended to change the qty with visual change in hover colour; that I could manually type in a qty and that an error was shown if the qty was not equal to or greater than 1.
+
+![product-qty-check](https://user-images.githubusercontent.com/74603013/135369642-d1cf7427-d6ec-402e-855c-38a3847dd856.png)
+
 ### **Testing toast-success**
 * I added an item to my basket to ensure the toast-success appeared to confirm to the user which item had been added, quantity, current bag cost and option to checkout. I chose an item that was under £50 to ensure the prompt to spend more for a free coffee was shown. This worked as planned.
 
 ![prompt-to-spend-more](https://user-images.githubusercontent.com/74603013/135245904-93f81cde-c8c6-466b-a272-5aa54c2b9224.png)
+
+* I then added an item to my basket that was more than £50 to ensure the prompt wasn't shown in the success-toast.
+
+
+
+
 
 
 ## **Problems Resolved During Manual Testing**
@@ -287,5 +299,5 @@ but the gallery and blog pages were fine in the localhost run from Gitpod:
 
 ![gitpod-blogs-success](https://user-images.githubusercontent.com/74603013/135150841-0c5980ac-f4ff-4e17-b132-4b39cacc49fb.png)
 
-As the project wored locally, this helped me to identify the source of the problem. I had forgotten to do the make migrations to Heroku Postgress. I made these migrations and the loaddata commands for the categories, products, blog and fixtures and the deployed app worked correctly.
+As the project worked locally, this helped me to identify the source of the problem. I had forgotten to do the make migrations to Heroku Postgress. I made these migrations and the loaddata commands for the categories, products, blog and fixtures and the deployed app worked correctly.
 
