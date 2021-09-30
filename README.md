@@ -144,7 +144,7 @@ Having created the user stories so that I knew who I was designing my website fo
 * During development, a database was setup using SQLite as this is included and did not require any further installation to support.
 * Upon deployment, Heroku Postgres was used, as this is an add-on service provided by Heroku.
 
-#### **Database models
+#### **Database models**
 * Blog model:
     * name = models.CharField(max_length=254)
     * author = models.CharField(max_length=254)
