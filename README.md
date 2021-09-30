@@ -137,6 +137,21 @@ Having created the user stories so that I knew who I was designing my website fo
         * Call to action buttons - I chose to colour the call-to-action buttons in bright colours to attract the user and make them more likely to click them.
         * Fonts - I kep the fonts as common fonts that are clean and easy to read.
 
+### **Wireframes**
+Before I started coding my project, I created wireframes using Balsamiq. I created wireframes for mobile, tablet and desktop devices to decide the layout at different screen sizes. I also used the user stories to add more detail to the website to provide a better user experience. 
+
+**Wireframes for mobile devices**
+![wireframes-mobile-1](https://user-images.githubusercontent.com/74603013/135415294-5620c13b-349d-45e7-948b-fa58e317eabf.png)
+
+![wireframes-mobile-2](https://user-images.githubusercontent.com/74603013/135416461-fba0a98f-aa31-4d30-ae97-492cad2938db.png)
+
+**Wireframes for tablet devices**
+![wireframes-tablet](https://user-images.githubusercontent.com/74603013/135416937-e90891d9-005d-405e-997f-bcfce77dabbb.png)
+
+**Wireframes for desktop devices**
+![wireframes-desktop](https://user-images.githubusercontent.com/74603013/135416716-e8e9a11d-26c2-48ac-ad3f-111e0ed25bcf.png)
+
+
 ### **Features**
 Features consistent across all the different pages of my project include:
 1. **Navbar**
@@ -284,3 +299,4 @@ The images used on my wireframes and website are from:
 * [spring gallery image](https://images.pexels.com/photos/8355200/pexels-photo-8355200.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [winter gallery image](https://images.pexels.com/photos/163756/park-winter-russia-city-park-163756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 * [deer gallery image](https://images.pexels.com/photos/1035367/pexels-photo-1035367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
+* [Tablet outline](https://image.freepik.com/free-icon/computer-tablet_318-40639.jpg) used for creating my tablet wireframes.

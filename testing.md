@@ -29,8 +29,11 @@
 
 ### **Site owner's perspective**
 * **I am the admin for Afan Forest Adventures, I want a simple method of managing products, so I can upload, edit and delete what we offer.**
+    * Once logged in, the superuser can acccess 'product management' from the dropdown menu on the 'my account' tab on the navbar to take them to the form to add a product. When viewing any of the products either from the all products page, products page or products details pages this user will have the option to edit or delete the products.
 * **I am the admin for Afan Forest Adventures, I want a simple method of managing the gallery, so  I can upload, edit and delete the images.**
-* **I am the admin for Afan Forest Adventures, I want a simple method of managing the blog, so  I can upload, edit and delete the images.**
+    * Once logged in, the superuser will have the option to edit or delete the gallery images either from the gallery page or image details pages. 
+* **I am the admin for Afan Forest Adventures, I want a simple method of managing blogs, so  I can upload, edit and delete the images.**
+    * Once logged in, the superuser will have the option to edit or delete blogs either from the blogs page or blog details pages.
 
 
 ## **HTML Validation**
@@ -354,12 +357,72 @@ The following manual tests were carried out on Microsoft Edge, Google Chrome and
 
 ![update-profile](https://user-images.githubusercontent.com/74603013/135383951-f1828544-a50d-41b8-822e-4bb16e4a5c11.png)
 
-### **Testing search bar**
+### **Testing logout**
+* I clicked the logout button from the dorpdown menu from the 'My Account' navbar tab. I confirmed that I got the screen to confirm that I wanted to sign out. 
+
+![Screenshot 2021-09-30 at 07-05-46 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135396828-ff3e23b3-992e-42da-acec-1d6031299267.png)
+
+* I clicked 'Sign Out' to confirm and made sure that I saw the toast success message to confirm successful sign out and that I was returned to the homepage.
+
+![Screenshot 2021-09-30 at 07-10-14 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135396992-333ab1ba-5092-41f7-836b-72cb55c4d43c.png)
+
+
+### **Testing signin**
+* I entered a false username and password to ensure that it wouldn't let me log in and confirmed that I got an error message that gave a bit extra security by saying "username and/or password incorrect".
+
+![Screenshot 2021-09-30 at 07-12-16 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135397230-c50c1ae1-1a94-4d36-9b83-40de5f8c5f25.png)
+
+* I then entered the correct username and password to prove that I could successfully log in.
+
+### **Testing superuser project management**
+* I logged into my superuser account. I then confirmed that 'Project Management' was an option in the dropdown menu of the 'My Account' navbar.
+
+![account-dropdown](https://user-images.githubusercontent.com/74603013/135407423-419c345d-6f8e-4cdd-b538-33afb7a266e8.png)
+
+* I then selected 'Product Management' and confirmed that I was taken to the 'Add a product' form.
+
+![Screenshot 2021-09-30 at 08-24-34 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135407135-e0524ab6-0b24-4a06-ae81-e9c7644a29c9.png)
+
+* I then completed the form fields, ensuring all the category options were available in the dropdwon selection menu and that the form wouldn't allow me to submit without the required fields being completed. I then completed the form with valid information.
+
+![Screenshot 2021-09-30 at 08-40-24 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135408957-ac69a9ef-2995-44e6-b389-02d4d0813720.png)
+
+* I clicked the 'Add product' button. I then confirmed that I had the toast success message to confirm the product was successfully added and that I was taken to the product details page for the kayak product I had just added. I also ensured that as a superuser, I had the option to edit or delete the product.
+
+![Screenshot 2021-09-30 at 08-41-12 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135409126-501fedc7-0722-4a97-a7da-42a2a5061ce1.png)
+
+* I confirmed that I had the option to edit or delete on all products.
+
+![Screenshot 2021-09-30 at 08-46-13 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135409859-5307d81f-8416-4972-a6c7-86de483a8263.png)
+
+* I confirmed that I also had the option to edit or delete blogs
+
+![Screenshot 2021-09-30 at 08-48-20 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135410206-75937a49-f61c-4a0c-9b31-902907976cce.png)
+
+* I confirmed that I also had the option to edit or delete gallery images
+
+![Screenshot 2021-09-30 at 08-49-53 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135410617-3fbc142e-4c62-45b1-a66d-fc33c87e84ef.png)
+
+* I confirmed the 'Edit product' form was working by clikcing edit on the squirrel image and changing the name to hedgehog.
+
+![Screenshot 2021-09-30 at 08-52-47 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135410881-24983328-4914-4ac0-9062-6f6748a93ff2.png)
+
+* On clicking 'Update gallery', I confirmed that I had the toast success to confirm the edit had taken effect and I was returned to the image details for the image I had just editted.
+
+![Screenshot 2021-09-30 at 08-54-47 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135411154-4c287cda-7e4a-4e3c-b98a-aebbdba75fe8.png)
+
+* I then re-edited this image to return the name to squirrel, and confirmed that I got the toast alert message to confirm that I was editing the image.
+
+![Screenshot 2021-09-30 at 08-56-21 Afan Forest Adventures](https://user-images.githubusercontent.com/74603013/135411429-b5e82636-7f60-4ff1-9071-376b118b1cc7.png)
+
+* I then confirmed that the image name had correctly returned to squirrel.
+* I then did the same test for editing a blog.
 
 
 
 
-### **Testing blogs and gallery **
+
+### **Testing blogs and gallery (not superuser)**
 * I clicked on the blog icon in the navbar and ensured that I was taken to the blogs page and could view the blogs.
 
 ![blogs](https://user-images.githubusercontent.com/74603013/135373954-4a5c6130-35be-434b-a001-b3f8f8c97224.png)
